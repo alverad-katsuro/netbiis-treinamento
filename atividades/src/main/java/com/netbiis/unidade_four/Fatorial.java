@@ -1,24 +1,28 @@
 package com.netbiis.unidade_four;
 
-import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class Fatorial {
+    public static void main(String[] args) {
+        int fatorial = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite um valor para calcular o fatorial"));
+        JOptionPane.showMessageDialog(null, "O resultado do fatorial é " + fatorial(fatorial));
+    }
 
-	public static void main(String[] args) {
-		
-		double fatorial = 1;
-		int numero, i;
-		
-		Scanner teclado = new Scanner(System.in);
-		System.out.println("Favor informar o n�mero");
-		numero = teclado.nextInt();
-		i = numero;
-		while (i >=1)
-		{
-			fatorial = fatorial * i;
-			i--; // numero = numero - 1;
-		}
-		System.out.println("O fatorial do n�mero:"+numero+"="+fatorial);
-		teclado.close();
-	}
+    public static int fatorial(int n){
+        if (n == 0) {
+            return 1;
+        } else {
+            return n * fatorial(n - 1);
+        }
+    }
+
+    public static int fatorial_int(int n){
+        int resp = n;
+
+        for (int i = n - 1; i > 0; i--) {
+            resp = resp * i;
+        }
+
+        return resp;
+    }
 }

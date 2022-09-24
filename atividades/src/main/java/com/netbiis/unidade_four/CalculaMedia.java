@@ -1,28 +1,24 @@
 package com.netbiis.unidade_four;
 
-import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class CalculaMedia {
 
 	public static void main(String[] args) {
 		
-		Scanner teclado = new Scanner(System.in);
 		System.out.println("Favor informar o valor");
-		var valor = teclado.nextInt();
+		float valor = Float.parseFloat(JOptionPane.showInputDialog(null, "Informe um valor"));
 		
-		var soma_valor = 0;
-		var cont = 0;
+		float soma_valor = 0;
+		int cont = 0;
 		
-		while(valor != -1)
-		{
+		while(valor != -1) {
 			soma_valor = soma_valor + valor;
 			cont++;
 			
-			System.out.println("Favor informar o valor");
-			valor = teclado.nextInt();			
+			valor = Float.parseFloat(JOptionPane.showInputDialog(null, "Informe um valor"));
 		}
-		System.out.println("M�dia="+soma_valor/cont);
-		teclado.close();
+        JOptionPane.showMessageDialog(null, "A média é "+ (soma_valor / cont));
 	}
 
 }

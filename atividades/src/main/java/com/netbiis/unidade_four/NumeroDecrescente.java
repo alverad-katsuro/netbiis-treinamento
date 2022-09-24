@@ -1,19 +1,18 @@
 package com.netbiis.unidade_four;
 
-import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class NumeroDecrescente {
 
 	public static void main(String[] args) {
 		
 		int numero;
+		numero = Integer.parseInt(JOptionPane.showInputDialog(null, "Informe um numero"));
 		
-		Scanner teclado = new Scanner(System.in);
-		System.out.println("Favor informar o n�mero");
-		numero = teclado.nextInt();
-		
-		for(int i=numero; i>=1; i=i-1)
-			System.out.println("N�mero="+i);	
-		teclado.close();
+        String resp = "";
+		for(int i=numero; i >= 0; i--) {
+			resp += i + " ";	
+        }
+        JOptionPane.showMessageDialog(null, resp);
 	}
 }

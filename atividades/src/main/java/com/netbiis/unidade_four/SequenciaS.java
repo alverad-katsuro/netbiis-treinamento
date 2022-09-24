@@ -4,23 +4,20 @@ public class SequenciaS {
 
 	public static void main(String[] args) {
 		
-		double s,s9=0,s10=0,s100=0,s10000=0;
-		s = 1;		
-		for(int i =2; i<=10000; i++)
-		{ //In�cio
-			s = s + 3; 
-			if (i == 9)
-				s9 = s;
-			else if (i == 10)
-				s10 = s;
-			else if (i == 100)
-				s100 = s;
-			else if (i == 10000)
-				s10000 = s;			
-		} //Fim
-		System.out.println("S9="+s9);
-		System.out.println("S10="+s10);
-		System.out.println("S100="+s100);
-		System.out.println("S10000="+s10000);		
+		int s[] = new int[5];
+		s[0] = 1;		
+		for(int i =2; i<=10000; i++) {
+			s[0] = s[0] + 3;
+            switch (i) {
+                case 9 -> s[1] = s[0];
+                case 10 -> s[2] = s[0];
+                case 100 -> s[3] = s[0];
+                case 1000 -> s[4] = s[0];
+            }
+		}
+		System.out.println("S9="+s[1]);
+		System.out.println("S10="+s[2]);
+		System.out.println("S100="+s[3]);
+		System.out.println("S10000="+s[4]);		
 	}
 }

@@ -1,23 +1,19 @@
 package com.netbiis.unidade_four;
 
-import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class CalculaE {
 
 	public static void main(String[] args) {
 		
 		double x, e = 0;
-		int i;
+	
+		x = Double.parseDouble(JOptionPane.showInputDialog(null, "Informe um valor para X"));
 		
-		Scanner teclado = new Scanner(System.in);
-		System.out.println("Favor informar o valor de X");
-		x = teclado.nextDouble();
-		
-		for(i=1;i<=50;i++)
-			e = e + Math.pow(x, i)/i;
-
-		System.out.println("O valor de E^"+x+"="+e);
-		teclado.close();
+		for(int i = 1; i <= 50; i++){
+			e = e + (Math.pow(x, i) / i);
+        }
+		JOptionPane.showMessageDialog(null, "O valor de E^"+ x + " = " + e);
 	}
 
 }

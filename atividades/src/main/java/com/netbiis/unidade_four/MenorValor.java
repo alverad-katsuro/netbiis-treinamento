@@ -1,32 +1,27 @@
 package com.netbiis.unidade_four;
 
-import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class MenorValor {
 
 	public static void main(String[] args) {
 		
 		int valor, menor, maior; 
-		
-		Scanner teclado = new Scanner(System.in);
-		System.out.println("Favor informar o valor");
-		valor = teclado.nextInt();
+
+		valor = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite um valor ou 0 para encerrar"));
 		menor = valor;
 		maior = valor;
-		
-		while(valor!=0)
-		{
-			if (valor < menor)
+		while(valor != 0) {
+			if (valor < menor){
 				menor = valor;
-			else if (valor > maior)
+            } else if (valor > maior){
 				maior = valor;
-			System.out.println("Favor informar o valor");
-			valor = teclado.nextInt();			
+            }
+            valor = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite um valor ou 0 para encerrar"));
+			
 		}
 		
-		System.out.println("O menor valor �:"+menor);
-		System.out.println("O maior valor �:"+maior);
-		teclado.close();
+        JOptionPane.showMessageDialog(null, "O menor valor é "+ menor + " e o maior é " + maior);
 	}
 
 }

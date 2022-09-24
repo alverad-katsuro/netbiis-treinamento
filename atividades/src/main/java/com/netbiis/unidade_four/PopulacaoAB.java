@@ -1,25 +1,25 @@
 package com.netbiis.unidade_four;
 
+import javax.swing.JOptionPane;
+
 public class PopulacaoAB {
 
 	public static void main(String[] args) {
 		
-		final double habitantesA = 5000000;
-		final double habitantesB = 7000000;
-		final double taxaA = 0.03;
+        final double taxaA = 0.03;
 		final double taxaB = 0.02;
+        double habitantesB = 7000000;
+		double habitantesA = 5000000;
 		
-		int tempo = 0;
+		int tempo;
 		double populacaoA = habitantesA;
 		double populacaoB = habitantesB;
 		
-		while(populacaoB >= populacaoA)
-		{
-			populacaoB = populacaoB + populacaoB*taxaB;
+        for (tempo = 0; populacaoA < populacaoB; tempo++) {
+            populacaoB = populacaoB + populacaoB*taxaB;
 			populacaoA = populacaoA + populacaoA*taxaA;
-			tempo++;
-		}
-		System.out.println("A popula��o de A levar� "+tempo+" anos para superar a popula��o de B");
+        }
+        JOptionPane.showMessageDialog(null, "A população A vai levar " + tempo + " para superar a população B");
 
 	}
 

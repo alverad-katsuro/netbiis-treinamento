@@ -1,23 +1,21 @@
 package com.netbiis.unidade_four;
 
-import java.util.Scanner;
+
+import javax.swing.JOptionPane;
 
 public class NumeroEstrelas {
 
 	public static void main(String[] args) {
 		
-		int i, numero_linhas;
-		String estrela = "*";
-		
-		Scanner teclado = new Scanner(System.in);
-		System.out.println("Favor informar o n�mero de linhas");
-		numero_linhas = teclado.nextInt();
-		
-		for(i=1; i<=numero_linhas;i++)
-		{
-			System.out.println(estrela);
+		int numero_linhas;
+		String estrela = "";
+		String fim = "";
+		numero_linhas = Integer.parseInt(JOptionPane.showInputDialog(null, "Informe um numero linhas"));
+		for(int i=1 ; i <= numero_linhas; i++) {
+            fim += estrela + "\n";
 			estrela = estrela + "*";
 		}
-		teclado.close();
+        fim += estrela + "\n";
+        JOptionPane.showMessageDialog(null, fim);
 	}
 }
