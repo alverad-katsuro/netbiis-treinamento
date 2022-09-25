@@ -7,15 +7,20 @@ public class MostraTabuada {
 
 	public static void main(String[] args) {
 		
-		int numero, total = 1;
+		int numero;
 		
 		numero = Integer.parseInt(JOptionPane.showInputDialog(null, "Informe um numero"));
+		tabuada(numero);
+	}
+
+    public static void tabuada(int numero){
 		String resposta = "";
-		for(int i=0; i <= 10 ;i++)
+        int total = 1;
+        for(int i=0; i <= 10 ;i++)
 		{
 			total = numero * i;
             resposta += numero+" x "+i+" = " + total + "\n";
 		}
         JOptionPane.showMessageDialog(null, resposta);
-	}
+    }
 }

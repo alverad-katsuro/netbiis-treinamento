@@ -3,27 +3,25 @@ package com.netbiis.unidade_five;
 import java.io.FileWriter;
 import java.io.PrintWriter;
 
+import javax.swing.JOptionPane;
+
+import com.netbiis.unidade_four.Repetir;
+
 public class Arquivo {
 
 	public static void main(String[] args) throws Exception  {
-		//vetores com as informa��es de 03 registros
-		String[] nomes ={"El�zio","Breno","H�lio"};
-		String[] fones ={"1111-2222","8888-3333","8887-5746"};
-		String[] cidades ={"Mossor�","Apodi","Assu"};
-		//cria o arquivo contatos.txt
-		FileWriter arq = new FileWriter("contatos.txt");
-		PrintWriter gravaarq = new PrintWriter(arq);
-		
-		gravaarq.println("================================");
-		gravaarq.println("Nomes || Telefones || Cidades   ");
-		for (int i = 0; i < nomes.length; i ++) {
-		gravaarq.println("================================");
-		    gravaarq.print(nomes[i]+" || ");
-		    gravaarq.print(fones[i]+" || ");
-		    gravaarq.println(cidades[i]);    
-		}
-		gravaarq.println("================================");
-		arq.close();
-		gravaarq.close();
+		FileWriter arquivo = new FileWriter("contatos.csv");
+		PrintWriter escrever = new PrintWriter(arquivo);
+		Repetir repetir = Repetir.CANCELAR;
+		escrever.println("Nomes,Telefones,Cidades");
+    
+        do {
+		    escrever.print(JOptionPane.showInputDialog(null, "Nome: ")+ ",");
+		    escrever.print(JOptionPane.showInputDialog(null, "Telefone: ")+ ",");
+		    escrever.println(JOptionPane.showInputDialog(null, "Cidade: "));
+            repetir = (Repetir) JOptionPane.showInputDialog(null, "Novo contribuente?", "Novo Contribuente?", JOptionPane.QUESTION_MESSAGE, null, Repetir.values(), Repetir.REPETIR);
+        } while (repetir == Repetir.REPETIR);
+		escrever.close();
+		arquivo.close();
 	}
 }

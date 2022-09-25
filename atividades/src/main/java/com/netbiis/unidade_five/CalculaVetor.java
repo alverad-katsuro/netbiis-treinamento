@@ -1,31 +1,30 @@
 package com.netbiis.unidade_five;
 
-import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class CalculaVetor {
 
 	public static void main(String[] args) {
-		int i;
 		double A[] = new double[10];
 		double B[] = new double[10];
-		Scanner teclado = new Scanner(System.in);
 		
-		for(i=0;i<10;i++)
-		{
-			System.out.println("Favor informar o valor de A["+i+"]");
-			A[i] = teclado.nextDouble();
-			//alimentar o vetor B
-			if(i%2==0) //� par?
+		for(int i=0; i < 10; i++) {
+			A[i] = Double.parseDouble(JOptionPane.showInputDialog(null, "Digite o valor de A["+i+"]"));
+			if(i % 2==0){
 				B[i] = 2*A[i];
-			else
+            } else {
 				B[i] = A[i]/2;
+            }
 		}
-		for(double valor: A)
-			System.out.print("A="+valor);
-		System.out.println("************");
-		for(double valor: B)
-			System.out.print("B="+valor);	
+        String resposta = "";
+		for(double valor: A) {
+			resposta += "A = "+valor + " \t";
+        }
+        resposta+="\n";
+		for(double valor: B) {
+            resposta += "B = "+valor + " \t";
+        }
+        JOptionPane.showMessageDialog(null, resposta);
 		
-		teclado.close();
 	}
 }
