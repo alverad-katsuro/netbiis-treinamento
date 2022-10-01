@@ -26,15 +26,19 @@ public class Aluno {
     private String matricula;
     private String nome;
     private String endereco;
-    private float nota;
+    private float nota[] = new float[4];
     private Sexo sexo;
     private String telefone;
+    private float frequencia;
 
     public static void main(String[] args) {
         String nome = JOptionPane.showInputDialog("Digite o nome do Aluno");
         String matricula = JOptionPane.showInputDialog("Digite a Matricula");
         String endereco = JOptionPane.showInputDialog("Digite o Endereço");
-        float nota = Float.parseFloat(JOptionPane.showInputDialog("Digite a nota do aluno"));
+        float nota[] = new float[4];
+        for (int i = 0; i < 4; i++) {
+            nota[i] = Float.parseFloat(JOptionPane.showInputDialog("Digite a nota do aluno"));
+        }
         Sexo sexo = (Sexo) JOptionPane.showInputDialog(null, "Selecione o sexo do aluno", "Input", JOptionPane.INFORMATION_MESSAGE, null, Sexo.values(), Sexo.valueOf("MASCULINO"));
         Aluno aluno = new Aluno(matricula, nome, endereco, nota, sexo);
         JOptionPane.showMessageDialog(null, "Informações:\n Aluno: "+ aluno.getNome()+"\n Matricula: "+aluno.getMatricula()+"\n Endereço: "+aluno.getEndereco()+"\n Sexo: "+ aluno.getSexo()+"\n Nota: "+aluno.getNota());
@@ -47,7 +51,7 @@ public class Aluno {
                 + ", sexo=" + sexo + "]";
     }
 
-    public Aluno(String matricula, String nome, String endereco, float nota, Sexo sexo) {
+    public Aluno(String matricula, String nome, String endereco, float nota[], Sexo sexo) {
         this.matricula = matricula;
         this.nome = nome;
         this.endereco = endereco;
@@ -64,6 +68,24 @@ public class Aluno {
             notas += Float.parseFloat(JOptionPane.showInputDialog(null, "Digite o valor da "+ i + "º nota."));
         }
         JOptionPane.showMessageDialog(null, "A média das notas é: " + (notas / 4.0));
+    }
+
+    public final boolean passou(){
+        float media = getMedia();
+        if (media >= 7.0f && frequencia >= 75.0f){
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+    public final float getMedia(){
+        float notas = 0;
+        for (int i = 0; i < nota.length; i++) {
+            notas += nota[i];            
+        }
+        return notas / 4f;
     }
 
     public String getMatricula() {
@@ -87,6 +109,18 @@ public class Aluno {
         this.nome = JOptionPane.showInputDialog("Digite o Nome");
     }
 
+    public void setFrequencia(float frequencia) {
+        this.frequencia = frequencia;
+    }
+
+    public void setFrequencia() {
+        this.frequencia = Float.parseFloat(JOptionPane.showInputDialog(null, "Informe a frequencia"));
+    }
+
+    public float getFrequencia() {
+        return frequencia;
+    }
+
     public String getEndereco() {
         return endereco;
     }
@@ -96,14 +130,16 @@ public class Aluno {
     public void setEndereco(){
         this.endereco = JOptionPane.showInputDialog(null, "Digite o Endereço");
     }
-    public float getNota() {
+    public float[] getNota() {
         return nota;
     }
-    public void setNota(float nota) {
+    public void setNota(float nota[]) {
         this.nota = nota;
     }
     public void setNota(){
-        this.nota = Float.parseFloat(JOptionPane.showInputDialog(null, "Digite o Nota"));
+        for (int i = 0; i < nota.length; i++) {
+            this.nota[i] = Float.parseFloat(JOptionPane.showInputDialog(null, "Digite o Nota " + (i + 1)));
+        }
     }
     public Sexo getSexo() {
         return sexo;
