@@ -1,4 +1,4 @@
-package com.curso2.unidade4;
+package com.curso2.unidade3;
 
 /* Não foi necessário utilizar todas os get e set */
 
