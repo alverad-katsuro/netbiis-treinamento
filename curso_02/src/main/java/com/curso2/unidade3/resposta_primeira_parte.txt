@@ -1,0 +1,4 @@
+• 1) Uma casa está para uma planta arquitetônica assim como um objeto está para:
+(c) uma classe
+• 2) Para criar um sistema de informação que gerencie o aluguel de uma frota de carros, quais são as classes de objeto necessárias? 
+Carros, Cliente, Locadora
