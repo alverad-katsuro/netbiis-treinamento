@@ -78,6 +78,14 @@ public class Locacao {
 
     }
 
+    public static void setLocacaoList(ArrayList<Locacao> locacaoList) {
+        LocacaoList = locacaoList;
+    }
+
+    public int getIdCarro() {
+        return IdCarro;
+    }
+
     public static ArrayList<Locacao> getLocacaoList(){
         return Locacao.LocacaoList;
     }

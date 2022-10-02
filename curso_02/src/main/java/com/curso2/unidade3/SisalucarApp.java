@@ -1,8 +1,5 @@
 package com.curso2.unidade3;
 
-import java.time.LocalDate;
-import java.util.Date;
-
 /**
  * SisalucarApp
  */
