@@ -15,13 +15,14 @@ public class Carro {
     private int ano;
     private float valorDiaria;
     private String placa;
+    private Revendedor revendedor;
 
     public Carro(){
         this.idCarro = getIdAllCarro();
         Carro.incIdAllCarro();        
     }
 
-    public Carro(String modelo, String cor, String fabricante, String motor, int ano, float valorDiaria, String placa){
+    public Carro(String modelo, String cor, String fabricante, String motor, int ano, float valorDiaria, String placa, Revendedor revendedor){
         this.idCarro = getIdAllCarro();
         Carro.incIdAllCarro();
         this.modelo = modelo;
@@ -31,8 +32,18 @@ public class Carro {
         this.valorDiaria = valorDiaria;
         this.placa = placa;
         this.ano = ano;
+        this.revendedor = revendedor;
     }
     
+    
+    public Revendedor getRevendedor() {
+        return revendedor;
+    }
+
+    public void setRevendedor(Revendedor revendedor) {
+        this.revendedor = revendedor;
+    }
+
     public static void setIdAllCarro(int idAllCarro) {
         Carro.idAllCarro = idAllCarro;
     }
