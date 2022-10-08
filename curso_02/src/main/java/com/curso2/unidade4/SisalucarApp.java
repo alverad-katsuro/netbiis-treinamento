@@ -1,5 +1,5 @@
 package com.curso2.unidade4;
-
+import com.curso2.unidade3.Cliente;
 /**
  * SisalucarApp
  */
@@ -15,6 +15,7 @@ public class SisalucarApp {
         Locacao.realizarLocacao(1, 1, 1500f, "2022-10-02");
         Locacao.realizarLocacao(1, 1, 1500f, "2022-11-10","2022-11-12");
 
+        System.out.println(celta.getAno());
         System.out.println(locacaoLista.size());
         Locacao.gerarRelatorio("2022-10-02", "2022-12-02");
     }

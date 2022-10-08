@@ -1,32 +1,36 @@
 package com.curso2.unidade4;
 
-public class Cliente {
+public class Cliente2 {
     private static int idAllClient = 0;
     private int idClient;
     private String cpf;
     private String nome;
-    private String cnh;
+    private String endereco;
 
-    public Cliente(){
+    public Cliente2(){
         idClient = getIdAllClient();
-        Cliente.setIdAllClient(idClient++);
+        Cliente2.setIdAllClient(idClient++);
     }
-
-    public Cliente(String nome, String cpf, String cnh){
+ 
+    public Cliente2(String nome, String cpf, String endereco){
         idClient = getIdAllClient();
-        Cliente.setIdAllClient(idClient++);
+        Cliente2.setIdAllClient(idClient++);
         this.cpf = cpf;
         this.nome = nome;
-        this.cnh = cnh;
+        this.endereco = endereco;
     }
-
+    
+    @Override
+    public String toString() {
+        return "Cliente2 [idClient=" + idClient + ", cpf=" + cpf + ", nome=" + nome + ", endereco=" + endereco + "]";
+    }
 
     public static int getIdAllClient() {
         return idAllClient;
     }
 
     public static void setIdAllClient(int idAllClient) {
-        Cliente.idAllClient = idAllClient;
+        Cliente2.idAllClient = idAllClient;
     }
     public int getIdClient() {
         return idClient;
@@ -46,10 +50,12 @@ public class Cliente {
     public void setNome(String nome) {
         this.nome = nome;
     }
-    public String getCnh() {
-        return cnh;
+
+    public String getEndereco() {
+        return endereco;
     }
-    public void setCnh(String cnh) {
-        this.cnh = cnh;
-    }    
+
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
 }

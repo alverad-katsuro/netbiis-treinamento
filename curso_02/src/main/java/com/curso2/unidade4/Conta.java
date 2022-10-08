@@ -1,17 +1,32 @@
 package com.curso2.unidade4;
 
+import java.util.ArrayList;
+
 /* Não foi necessário utilizar todas os get e set */
 
 public class Conta {
-    private String nome;
-    private Double saldo;
-    private Double limite;
-    private Double limite_total;
-    private int numero;
+    /* Anterior
+        private Cliente2 cliente;
+     */
+    protected ArrayList<Cliente2> cliente = new ArrayList<Cliente2>();
+    protected Double saldo;
+    protected Double limite;
+    protected Double limite_total;
+    protected int numero;
 
     public static void main(String[] args) {
-        Conta c1 = new Conta("U1", 1500.0, 500.0, 0);
-        Conta c2 = new Conta("U2", 10000.0, 1000.0, 1);
+        ArrayList<Cliente2> cliente1 =  new ArrayList<Cliente2>();
+        cliente1.add(new Cliente2("Nome", "CPF", "Rua"));
+        cliente1.add(new Cliente2("Nome", "CPF", "Rua"));
+        cliente1.add(new Cliente2("Nome", "CPF", "Rua"));
+        cliente1.add(new Cliente2("Nome", "CPF", "Rua"));
+        cliente1.add(new Cliente2("Nome", "CPF", "Rua"));
+        cliente1.add(new Cliente2("Nome", "CPF", "Rua"));
+        cliente1.add(new Cliente2("Nome", "CPF", "Rua"));
+        ArrayList<Cliente2> cliente2 =  new ArrayList<Cliente2>();
+        cliente2.add(new Cliente2("Nome2", "CPF", "Rua"));       
+        Conta c1 = new Conta(cliente1, 1500.0, 500.0, 0);
+        Conta c2 = new Conta(cliente2, 10000.0, 1000.0, 1);
         System.out.println(c1.getSaldoTotal());
         c1.saque(2000.0);
         System.out.println(c1.getSaldoTotal());
@@ -22,12 +37,21 @@ public class Conta {
         
     }
 
-    public Conta(String nome, Double saldo, Double limite_total, int numero) {
-        this.nome = nome;
+    public Conta(ArrayList<Cliente2> cliente, Double saldo, Double limite_total, int numero) {
+        if (cliente.size() < 6) {
+            this.cliente = cliente;
+        } else {
+            System.out.println("AAAAAAAAA" + cliente.size());
+            new Exception();
+        }
         this.saldo = saldo;
         this.limite = limite_total;
         this.limite_total = limite_total;
         this.numero = numero;
+    }
+
+    public void atualiza(double taxa){
+        setSaldo(getSaldo() * (1 + taxa));
     }
 
     public boolean saque(Double valor){
@@ -65,11 +89,15 @@ public class Conta {
         }
     }
 
-    public String getNome() {
-        return nome;
+    public ArrayList<Cliente2> getCliente() {
+        return cliente;
     }
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setCliente(ArrayList<Cliente2> cliente) {
+        if (cliente.size() < 6) {
+            this.cliente = cliente;
+        } else {
+            new Exception("Muitos clientes na conta");
+        }
     }
     public Double getSaldo() {
         return saldo;
