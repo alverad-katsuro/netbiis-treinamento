@@ -1,4 +1,4 @@
-package com.curso2.unidade4;
+package com.curso2.unidade4.sisalucar;
 
 public abstract class Veiculo {
     protected float velocidade;

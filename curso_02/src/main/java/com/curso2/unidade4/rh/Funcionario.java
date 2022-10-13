@@ -1,4 +1,4 @@
-package com.curso2.unidade4;
+package com.curso2.unidade4.rh;
 
 import javax.swing.JOptionPane;
 

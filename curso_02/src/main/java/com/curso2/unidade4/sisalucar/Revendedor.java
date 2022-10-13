@@ -1,4 +1,4 @@
-package com.curso2.unidade4;
+package com.curso2.unidade4.sisalucar;
 
 public enum Revendedor {
     RRCAR("000000/0000", "Alguma Rua, 1500", "Chevrolet"),

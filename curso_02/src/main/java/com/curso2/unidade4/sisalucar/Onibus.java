@@ -1,4 +1,4 @@
-package com.curso2.unidade4;
+package com.curso2.unidade4.sisalucar;
 
 public class Onibus extends Veiculo {
     private static int idAllOnibus = 0;

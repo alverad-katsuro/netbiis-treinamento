@@ -1,4 +1,4 @@
-package com.curso2.unidade4;
+package com.curso2.unidade4.rh;
 
 public interface Contribuinte {
     void pagaIR();

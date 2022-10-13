@@ -1,4 +1,4 @@
-package com.curso2.unidade4;
+package com.curso2.unidade4.desenho;
 
 public final class Quadrado extends Figura {
 

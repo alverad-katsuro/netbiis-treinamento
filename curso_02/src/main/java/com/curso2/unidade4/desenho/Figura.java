@@ -1,4 +1,4 @@
-package com.curso2.unidade4;
+package com.curso2.unidade4.desenho;
 
 public sealed abstract class Figura permits Quadrado, Circulo, Triangulo  {
     

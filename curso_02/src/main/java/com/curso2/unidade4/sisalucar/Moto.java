@@ -1,4 +1,4 @@
-package com.curso2.unidade4;
+package com.curso2.unidade4.sisalucar;
 
 public class Moto extends Veiculo {
     private static int idAllMoto = 0;

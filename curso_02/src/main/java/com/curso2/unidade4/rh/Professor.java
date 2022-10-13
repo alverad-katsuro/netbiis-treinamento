@@ -1,4 +1,4 @@
-package com.curso2.unidade4;
+package com.curso2.unidade4.rh;
 
 public class Professor extends Funcionario implements Autenticavel, Cidadao, Contribuinte {
     
