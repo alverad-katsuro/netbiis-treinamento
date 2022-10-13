@@ -14,7 +14,10 @@ public class SisalucarApp {
         Locacao.realizarLocacao(0, 0, 150f, "2022-10-02");
         Locacao.realizarLocacao(1, 1, 1500f, "2022-10-02");
         Locacao.realizarLocacao(1, 1, 1500f, "2022-11-10","2022-11-12");
-
+        System.out.println(cliente_um);
+        System.out.println(cliente_dois);
+        System.out.println(celta);
+        System.out.println(lamb);
         System.out.println(locacaoLista.size());
         Locacao.gerarRelatorio("2022-10-02", "2022-12-02");
     }
