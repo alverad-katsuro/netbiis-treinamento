@@ -3,6 +3,7 @@ package com.netbiis.sisrestaurante;
 public sealed abstract class Produto permits Hall_Wassabi, Temaki_Especial, Promocao, Entrada {
     protected int quantidade = 1;
     protected String nome;
+    protected float preco_final;
 
     
     public int getQuantidade() {
@@ -70,6 +71,14 @@ public sealed abstract class Produto permits Hall_Wassabi, Temaki_Especial, Prom
                 }
             }
         }
+    }
+
+    public float getPreco_final() {
+        return preco_final;
+    }
+
+    public void setPreco_final(float preco_final) {
+        this.preco_final = preco_final;
     }
     
 }
