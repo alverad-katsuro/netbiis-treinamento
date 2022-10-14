@@ -3,6 +3,10 @@ package com.curso2.unidade2;
 import javax.swing.JOptionPane;
 
 public class FaturamentoTri {
+    
+    /** 
+     * @param args
+     */
     public static void main(String[] args) {
         parte_2();
     }

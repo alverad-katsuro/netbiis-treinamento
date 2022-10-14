@@ -4,6 +4,10 @@ import java.util.ArrayList;
 
 public class Desenhista {
     private ArrayList<Figura> figuras = new ArrayList<Figura>();
+    
+    /** 
+     * @param args
+     */
     public static void main(String[] args) {
         Desenhista desenhista = new Desenhista();
         desenhista.desenhaCirculo();

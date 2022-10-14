@@ -4,10 +4,19 @@ import javax.swing.JOptionPane;
 
 public class Fibo {
 
+    
+    /** 
+     * @param args
+     */
     public static void main(String[] args) {
         fibo(5);
     }
 
+    
+    /** 
+     * @param n
+     * @return long
+     */
     static long fibo(int n) {
         int atual = 0;
         int anterior = 0;

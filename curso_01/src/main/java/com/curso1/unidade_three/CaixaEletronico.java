@@ -4,7 +4,11 @@ import javax.swing.JOptionPane;
 
 public class CaixaEletronico {
 
-	public static void main(String[] args) {
+	
+    /** 
+     * @param args
+     */
+    public static void main(String[] args) {
         byte notas_de_100, notas_de_50, notas_de_10, notas_de_2;
 		int saque, resto;
 		

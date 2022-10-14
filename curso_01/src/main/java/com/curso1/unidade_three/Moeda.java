@@ -4,7 +4,11 @@ import javax.swing.JOptionPane;
 
 public class Moeda {
 
-	public static void main(String[] args) {
+	
+    /** 
+     * @param args
+     */
+    public static void main(String[] args) {
 		
 		double valor;
 		MoedaUnidade tipo_moeda;

@@ -4,7 +4,11 @@ import javax.swing.JOptionPane;
 
 public class CalculaMedia50Alunos {
 
-	public static void main(String[] args) {
+	
+    /** 
+     * @param args
+     */
+    public static void main(String[] args) {
 		
 		final double NUMERO_AVALIACOES = 4;
 		double nota, media;

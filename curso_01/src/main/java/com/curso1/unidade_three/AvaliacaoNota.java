@@ -4,7 +4,11 @@ import javax.swing.JOptionPane;
 
 public class AvaliacaoNota {
 
-	public static void main(String[] args) {
+	
+    /** 
+     * @param args
+     */
+    public static void main(String[] args) {
 		
 		float nota = Float.parseFloat((JOptionPane.showInputDialog(null,"Digite a nota:")));
 		

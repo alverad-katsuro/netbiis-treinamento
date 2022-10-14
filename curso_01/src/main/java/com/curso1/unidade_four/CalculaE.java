@@ -4,7 +4,11 @@ import javax.swing.JOptionPane;
 
 public class CalculaE {
 
-	public static void main(String[] args) {
+	
+    /** 
+     * @param args
+     */
+    public static void main(String[] args) {
 		
 		double x, e = 0;
 	

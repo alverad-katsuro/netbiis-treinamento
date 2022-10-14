@@ -4,7 +4,11 @@ import javax.swing.JOptionPane;
 
 public class Aluno {
 
-	public static void main(String[] args) {
+	
+    /** 
+     * @param args
+     */
+    public static void main(String[] args) {
 		final byte NUMERO_AVALIACOES = 4;
 		float nota = 0;
 		float media; 

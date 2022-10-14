@@ -5,6 +5,10 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 public class Caixa1 {
+    
+    /** 
+     * @param args
+     */
     public static void main(String[] args) {
         byte notas_de_200 = 0, notas_de_100 = 0, notas_de_50 = 0;
 		int saque, resto;

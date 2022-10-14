@@ -4,7 +4,11 @@ import javax.swing.JOptionPane;
 
 public class Aluno {
 
-	public static void main(String[] args) {
+	
+    /** 
+     * @param args
+     */
+    public static void main(String[] args) {
 		
 		String nome;
         String saida = "";

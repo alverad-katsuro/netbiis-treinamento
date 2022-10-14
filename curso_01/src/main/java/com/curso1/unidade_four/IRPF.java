@@ -4,7 +4,11 @@ import javax.swing.JOptionPane;
 
 public class IRPF {
 
-	public static void main(String[] args) {
+	
+    /** 
+     * @param args
+     */
+    public static void main(String[] args) {
 		
 		double irpf, renda_mensal, salario_liquido;
 		int numero_dependentes;

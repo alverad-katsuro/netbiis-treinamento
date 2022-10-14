@@ -3,6 +3,10 @@ package com.curso1.desafio_final.desafio_03;
 import javax.swing.JOptionPane;
 
 public class Parte_dois {
+    
+    /** 
+     * @param args
+     */
     public static void main(String[] args) {
         int contador = 1;
         String palavra = JOptionPane.showInputDialog(null, "Digite uma frase ou 0 para exibir o alfabeto");

@@ -5,7 +5,11 @@ import javax.swing.JOptionPane;
 
 public class NumeroEstrelas {
 
-	public static void main(String[] args) {
+	
+    /** 
+     * @param args
+     */
+    public static void main(String[] args) {
 		
 		int numero_linhas;
 		String estrela = "";

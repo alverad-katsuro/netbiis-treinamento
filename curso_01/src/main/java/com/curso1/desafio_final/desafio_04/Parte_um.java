@@ -3,6 +3,10 @@ package com.curso1.desafio_final.desafio_04;
 import java.util.Random;
 
 public class Parte_um {
+    
+    /** 
+     * @param args
+     */
     public static void main(String[] args) {
         int matrix[][] = new int[3][3];
         Random g = new Random();

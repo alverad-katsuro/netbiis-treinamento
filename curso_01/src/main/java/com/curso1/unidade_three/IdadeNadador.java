@@ -4,7 +4,11 @@ import javax.swing.JOptionPane;
 
 public class IdadeNadador {
 
-	public static void main(String[] args) {
+	
+    /** 
+     * @param args
+     */
+    public static void main(String[] args) {
 		
 
 		byte idade = Byte.parseByte(JOptionPane.showInputDialog(null,"Digite a idade do atleta"));

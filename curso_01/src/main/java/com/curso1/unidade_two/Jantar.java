@@ -3,6 +3,10 @@ package com.curso1.unidade_two;
 import javax.swing.JOptionPane;
 
 public class Jantar {
+    
+    /** 
+     * @param args
+     */
     public static void jantar(String[] args) {
         Object[] possibleValues = { 15, 18, 22 };
         float jantar = Float.parseFloat(JOptionPane.showInputDialog(null, "Digite o total do jantar:"));

@@ -14,6 +14,10 @@ public class Conta {
     protected Double limite_total;
     protected int numero;
 
+    
+    /** 
+     * @param args
+     */
     public static void main(String[] args) {
         ArrayList<Cliente2> cliente1 =  new ArrayList<Cliente2>();
         cliente1.add(new Cliente2("Nome", "CPF", "Rua"));
@@ -50,10 +54,19 @@ public class Conta {
         this.numero = numero;
     }
 
+    
+    /** 
+     * @param taxa
+     */
     public void atualiza(double taxa){
         setSaldo(getSaldo() * (1 + taxa));
     }
 
+    
+    /** 
+     * @param valor
+     * @return boolean
+     */
     public boolean saque(Double valor){
         if (valor > getSaldo() + getLimite()) {
             return false;
@@ -69,6 +82,10 @@ public class Conta {
         }
     }
 
+    
+    /** 
+     * @param valor
+     */
     public void deposito(Double valor){
         if (getLimite_total() != getLimite()){
             if (valor > getLimite_total() - getLimite()){
@@ -83,15 +100,28 @@ public class Conta {
         }
     }
 
+    
+    /** 
+     * @param conta
+     * @param valor
+     */
     public void transfere(Conta conta, Double valor){
         if (saque(valor)) {
             conta.deposito(valor);
         }
     }
 
+    
+    /** 
+     * @return ArrayList<Cliente2>
+     */
     public ArrayList<Cliente2> getCliente() {
         return cliente;
     }
+    
+    /** 
+     * @param cliente
+     */
     public void setCliente(ArrayList<Cliente2> cliente) {
         if (cliente.size() < 6) {
             this.cliente = cliente;
@@ -99,33 +129,69 @@ public class Conta {
             new Exception("Muitos clientes na conta");
         }
     }
+    
+    /** 
+     * @return Double
+     */
     public Double getSaldo() {
         return saldo;
     }
+    
+    /** 
+     * @return Double
+     */
     public Double getSaldoTotal() {
         return (saldo + (limite - limite_total));
     }
+    
+    /** 
+     * @param saldo
+     */
     public void setSaldo(Double saldo) {
         this.saldo = saldo;
     }
+    
+    /** 
+     * @return Double
+     */
     public Double getLimite() {
         return limite;
     }
     
+    
+    /** 
+     * @return Double
+     */
     public Double getLimite_total() {
         return limite_total;
     }
 
+    
+    /** 
+     * @param limite_total
+     */
     public void setLimite_total(Double limite_total) {
         this.limite_total = limite_total;
     }
 
+    
+    /** 
+     * @param limite
+     */
     public void setLimite(Double limite) {
         this.limite = limite;
     }
+    
+    /** 
+     * @return int
+     */
     public int getNumero() {
         return numero;
     }
+    
+    /** 
+     * @param numero
+     */
     public void setNumero(int numero) {
         this.numero = numero;
     }

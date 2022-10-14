@@ -6,7 +6,11 @@ import com.curso1.unidade_two.Sexo;
 
 public class PesoIdeal {
 
-	public static void main(String[] args) {
+	
+    /** 
+     * @param args
+     */
+    public static void main(String[] args) {
 	     
 		double altura, peso_ideal_homem, peso_ideal_mulher;
 

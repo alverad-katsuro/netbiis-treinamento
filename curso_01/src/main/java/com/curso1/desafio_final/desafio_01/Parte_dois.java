@@ -3,6 +3,10 @@ package com.curso1.desafio_final.desafio_01;
 import javax.swing.JOptionPane;
 
 public class Parte_dois {
+    
+    /** 
+     * @param args
+     */
     public static void main(String[] args) {
         JOptionPane.showMessageDialog(null, "Desafio 1");
         int inicial = 2;

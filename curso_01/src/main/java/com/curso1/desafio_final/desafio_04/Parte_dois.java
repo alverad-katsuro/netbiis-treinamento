@@ -14,6 +14,11 @@ import com.curso1.unidade_two.Aluno;
 
 
 public class Parte_dois {
+    
+    /** 
+     * @param args
+     * @throws Exception
+     */
     public static void main(String[] args) throws Exception {
         ArrayList<Aluno> alunoList = new ArrayList<Aluno>();
         for (int i = 0; i < 4; i++) {

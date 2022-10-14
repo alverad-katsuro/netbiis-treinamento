@@ -12,6 +12,10 @@ import com.curso3.unidade1.rh.Professor;
 import com.curso3.unidade1.rh.Universidade;
 
 public class Mac {
+    
+    /** 
+     * @param args
+     */
     public static void main(String[] args) {
         Universidade universidade = new Universidade();
         universidade.addFuncionario(new Diretor("Alguem", Colacao.DOUTORADO));
@@ -41,6 +45,10 @@ public class Mac {
         Mac.avaliarEnsino(universidade);
     }
 
+    
+    /** 
+     * @param universidade
+     */
     public static void avaliarEnsino(Universidade universidade){
         ArrayList<Funcionario> funcionarios = universidade.getFuncionarios();
         int graduacao = 0;

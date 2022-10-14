@@ -4,7 +4,11 @@ import javax.swing.JOptionPane;
 
 public class Triangulo {
 
-	public static void main(String[] args) {
+	
+    /** 
+     * @param args
+     */
+    public static void main(String[] args) {
 		float a, b, c;
         a = Float.parseFloat(JOptionPane.showInputDialog(null, "Digite o lado a"));
         b = Float.parseFloat(JOptionPane.showInputDialog(null, "Digite o lado b"));

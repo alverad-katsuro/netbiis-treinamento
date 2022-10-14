@@ -5,7 +5,12 @@ import java.io.PrintWriter;
 
 public class MatrizIdentidade {
 
-	public static void main(String[] args) throws Exception {
+	
+    /** 
+     * @param args
+     * @throws Exception
+     */
+    public static void main(String[] args) throws Exception {
 		int identidade[][] = new int[3][3];
 		
 		for(int i = 0; i < 3; i++){

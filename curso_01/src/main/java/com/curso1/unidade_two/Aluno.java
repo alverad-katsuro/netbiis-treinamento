@@ -31,6 +31,10 @@ public class Aluno {
     private String telefone;
     private float frequencia;
 
+    
+    /** 
+     * @param args
+     */
     public static void main(String[] args) {
         String nome = JOptionPane.showInputDialog("Digite o nome do Aluno");
         String matricula = JOptionPane.showInputDialog("Digite a Matricula");
@@ -45,6 +49,10 @@ public class Aluno {
     }
 
 
+    
+    /** 
+     * @return String
+     */
     @Override
     public String toString() {
         return "Aluno [endereco=" + endereco + ", matricula=" + matricula + ", nome=" + nome + ", nota=" + nota
@@ -70,6 +78,10 @@ public class Aluno {
         JOptionPane.showMessageDialog(null, "A média das notas é: " + (notas / 4.0));
     }
 
+    
+    /** 
+     * @return boolean
+     */
     public final boolean passou(){
         float media = getMedia();
         if (media >= 7.0f && frequencia >= 75.0f){
@@ -80,6 +92,10 @@ public class Aluno {
 
     }
 
+    
+    /** 
+     * @return float
+     */
     public final float getMedia(){
         float notas = 0;
         for (int i = 0; i < nota.length; i++) {
@@ -88,19 +104,35 @@ public class Aluno {
         return notas / 4f;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getMatricula() {
         return matricula;
     }
+    
+    /** 
+     * @param matricula
+     */
     public void setMatricula(String matricula) {
         this.matricula = matricula;
     }
     public void setMatricula(){
         this.matricula = JOptionPane.showInputDialog(null, "Digite o Matricula");
     }
+    
+    /** 
+     * @return String
+     */
     public String getNome() {
         return nome;
     }
 
+    
+    /** 
+     * @param nome
+     */
     public void setNome(String nome) {
         this.nome = nome;
     }
@@ -109,6 +141,10 @@ public class Aluno {
         this.nome = JOptionPane.showInputDialog("Digite o Nome");
     }
 
+    
+    /** 
+     * @param frequencia
+     */
     public void setFrequencia(float frequencia) {
         this.frequencia = frequencia;
     }
@@ -117,22 +153,42 @@ public class Aluno {
         this.frequencia = Float.parseFloat(JOptionPane.showInputDialog(null, "Informe a frequencia"));
     }
 
+    
+    /** 
+     * @return float
+     */
     public float getFrequencia() {
         return frequencia;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getEndereco() {
         return endereco;
     }
+    
+    /** 
+     * @param endereco
+     */
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
     public void setEndereco(){
         this.endereco = JOptionPane.showInputDialog(null, "Digite o Endereço");
     }
+    
+    /** 
+     * @return float[]
+     */
     public float[] getNota() {
         return nota;
     }
+    
+    /** 
+     * @param nota[]
+     */
     public void setNota(float nota[]) {
         this.nota = nota;
     }
@@ -141,21 +197,37 @@ public class Aluno {
             this.nota[i] = Float.parseFloat(JOptionPane.showInputDialog(null, "Digite o Nota " + (i + 1)));
         }
     }
+    
+    /** 
+     * @return Sexo
+     */
     public Sexo getSexo() {
         return sexo;
     }
     public void setSexo() {
         this.sexo = (Sexo) JOptionPane.showInputDialog(null, "Selecione o sexo do aluno", "Sexo Seleção", JOptionPane.QUESTION_MESSAGE, null, Sexo.values(), Sexo.MASCULINO);
     }
+    
+    /** 
+     * @param sexo
+     */
     public void setSexo(Sexo sexo) {
         this.sexo = sexo;
     }
+    
+    /** 
+     * @param telefone
+     */
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
     public void setTelefone(){
         this.telefone = JOptionPane.showInputDialog(null, "Digite o Telefone");
     }
+    
+    /** 
+     * @return String
+     */
     public String getTelefone() {
         return telefone;
     }

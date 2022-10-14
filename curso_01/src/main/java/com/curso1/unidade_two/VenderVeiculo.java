@@ -3,6 +3,10 @@ package com.curso1.unidade_two;
 import javax.swing.JOptionPane;
 
 public class VenderVeiculo {
+    
+    /** 
+     * @param args
+     */
     public static void main(String[] args) {
         String veiculo = JOptionPane.showInputDialog(null, "Digite o modelo do veículo:");
         float veiculo_preco = Float.parseFloat(JOptionPane.showInputDialog(null, "Digite o preço do veículo:"));

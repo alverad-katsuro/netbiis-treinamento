@@ -3,6 +3,10 @@ package com.curso1.unidade_two;
 import javax.swing.JOptionPane;
 
 public class Pagamento {
+    
+    /** 
+     * @param args
+     */
     public static void main(String[] args) {
         float conta = Float.parseFloat(JOptionPane.showInputDialog("Digite o valor da conta"));
         String pagamento[] = {"Avista", "Parcelado"};

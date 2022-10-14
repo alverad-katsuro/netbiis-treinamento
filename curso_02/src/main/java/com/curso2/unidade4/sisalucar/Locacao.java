@@ -35,16 +35,35 @@ public class Locacao {
         this.dataFim = dataFim;
     }
 
+    
+    /** 
+     * @param IdCliente
+     * @param IdCarro
+     * @param valorLocado
+     * @param dataInicio
+     * @param dataFim
+     */
     public static void realizarLocacao(int IdCliente, int IdCarro, float valorLocado, String dataInicio, String dataFim){
         Locacao nova = new Locacao(IdCliente, IdCarro, valorLocado, LocalDate.parse(dataInicio), LocalDate.parse(dataFim));
         Locacao.getLocacaoList().add(nova);
     }
 
+    
+    /** 
+     * @param IdCliente
+     * @param IdCarro
+     * @param valorLocado
+     * @param dataFim
+     */
     public static void realizarLocacao(int IdCliente, int IdCarro, float valorLocado, String dataFim){
         Locacao nova = new Locacao(IdCliente, IdCarro, valorLocado, LocalDate.parse(dataFim));
         Locacao.getLocacaoList().add(nova);
     }
 
+    
+    /** 
+     * @param ...date
+     */
     public static void gerarRelatorio(String ...date){
         if (date.length == 1) {
             gerarRelatorio(LocalDate.parse(date[0]));
@@ -53,6 +72,10 @@ public class Locacao {
         }
     }
 
+    
+    /** 
+     * @param ...date
+     */
     public static void gerarRelatorio(LocalDate ...date){
         float lucro = 0;
         int carrosLocados = 0;
@@ -78,52 +101,112 @@ public class Locacao {
 
     }
 
+    
+    /** 
+     * @param locacaoList
+     */
     public static void setLocacaoList(ArrayList<Locacao> locacaoList) {
         LocacaoList = locacaoList;
     }
 
+    
+    /** 
+     * @return int
+     */
     public int getIdCarro() {
         return IdCarro;
     }
 
+    
+    /** 
+     * @return ArrayList<Locacao>
+     */
     public static ArrayList<Locacao> getLocacaoList(){
         return Locacao.LocacaoList;
     }
 
+    
+    /** 
+     * @return int
+     */
     public static int getIdAllLocacao() {
         return Locacao.IdAllLocacao;
     }
 
+    
+    /** 
+     * @param idAllLocacao
+     */
     public static void setIdAllLocacao(int idAllLocacao) {
         IdAllLocacao = idAllLocacao;
     }
+    
+    /** 
+     * @return int
+     */
     public int getIdLocacao() {
         return IdLocacao;
     }
+    
+    /** 
+     * @param idLocacao
+     */
     public void setIdLocacao(int idLocacao) {
         IdLocacao = idLocacao;
     }
+    
+    /** 
+     * @return int
+     */
     public int getIdCliente() {
         return IdCliente;
     }
+    
+    /** 
+     * @param idCliente
+     */
     public void setIdCliente(int idCliente) {
         IdCliente = idCliente;
     }
+    
+    /** 
+     * @return float
+     */
     public float getValorLocado() {
         return valorLocado;
     }
+    
+    /** 
+     * @param valorLocado
+     */
     public void setValorLocado(float valorLocado) {
         this.valorLocado = valorLocado;
     }
+    
+    /** 
+     * @return LocalDate
+     */
     public LocalDate getDataInicio() {
         return dataInicio;
     }
+    
+    /** 
+     * @param dataInicio
+     */
     public void setDataInicio(LocalDate dataInicio) {
         this.dataInicio = dataInicio;
     }
+    
+    /** 
+     * @return LocalDate
+     */
     public LocalDate getDataFim() {
         return dataFim;
     }
+    
+    /** 
+     * @param dataFim
+     */
     public void setDataFim(LocalDate dataFim) {
         this.dataFim = dataFim;
     }

@@ -4,6 +4,10 @@ import javax.swing.JOptionPane;
 
 public class Calculadora {
 
+    
+    /** 
+     * @param args
+     */
     public static void main(String[] args) {
         float x = Float.MIN_NORMAL, y = Float.MIN_NORMAL;
         boolean a = true, b = true;
@@ -36,36 +40,90 @@ public class Calculadora {
         };
     }
     
+    
+    /** 
+     * @param x
+     * @param y
+     * @return float
+     */
     public final static float soma(float x, float y) {
         return x + y;
     }
 
+    
+    /** 
+     * @param x
+     * @param y
+     * @return float
+     */
     public final static float subtracao(float x, float y) {
         return x - y;
     }
 
+    
+    /** 
+     * @param x
+     * @param y
+     * @return float
+     */
     public final static float multiplicacao(float x, float y) {
         return x * y;
     }
 
+    
+    /** 
+     * @param x
+     * @param y
+     * @return float
+     */
     public final static float divisao(float x, float y) {
         return x / y;
     }
 
+    
+    /** 
+     * @param x
+     * @param y
+     * @return boolean
+     */
     public final static boolean maior(float x, float y) {
         return x > y;
     }
 
+    
+    /** 
+     * @param x
+     * @param y
+     * @return boolean
+     */
     public final static boolean menor(float x, float y) {
         return x < y;
     }
 
+    
+    /** 
+     * @param x
+     * @param y
+     * @return boolean
+     */
     public final static boolean maiorIgual(float x, float y) {
         return x >= y;
     }
+    
+    /** 
+     * @param x
+     * @param y
+     * @return boolean
+     */
     public final static boolean E(boolean x, boolean y) {
         return x && y;
     }
+    
+    /** 
+     * @param x
+     * @param y
+     * @return boolean
+     */
     public final static boolean OU(boolean x, boolean y) {
         return x || y;
     }

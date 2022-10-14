@@ -4,7 +4,11 @@ import javax.swing.JOptionPane;
 
 public class Numero {
 
-	public static void main(String[] args) {
+	
+    /** 
+     * @param args
+     */
+    public static void main(String[] args) {
 		
 		int numero = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite um valor"));
 

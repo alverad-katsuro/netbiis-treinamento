@@ -5,6 +5,10 @@ package com.curso2.unidade3;
  */
 public class SisalucarApp {
 
+    
+    /** 
+     * @param args
+     */
     public static void main(String[] args) {
         var locacaoLista = Locacao.getLocacaoList();
         Cliente cliente_um = new Cliente("Cliente um", "000.000.000-00", "123134");

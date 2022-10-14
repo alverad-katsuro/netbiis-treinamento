@@ -30,6 +30,10 @@ public class Pagina99 {
   private String texto_prova;
   private boolean porta;
 
+    
+    /** 
+     * @param args
+     */
     public static void main(String[] args) {
         //Pagina99 atividade_dois = new Pagina99(1550.0f, 8, "É amanhã a prova", true);      
     }
@@ -42,6 +46,10 @@ public class Pagina99 {
         this.porta = porta;
     }
 
+    
+    /** 
+     * @return String
+     */
     @Override
     public String toString() {
         if (porta) {
@@ -53,34 +61,66 @@ public class Pagina99 {
         }
     }
 
+    
+    /** 
+     * @return int
+     */
     public int getNum_avaliacoes() {
         return num_avaliacoes;
     }
 
+    
+    /** 
+     * @return float
+     */
     public float getSaldo_bancario() {
         return saldo_bancario;
     }
 
+    
+    /** 
+     * @param saldo_bancario
+     */
     public void setSaldo_bancario(float saldo_bancario) {
         this.saldo_bancario = saldo_bancario;
     }
 
+    
+    /** 
+     * @return int
+     */
     public int getNumero_irmaos() {
         return numero_irmaos;
     }
 
+    
+    /** 
+     * @param numero_irmaos
+     */
     public void setNumero_irmaos(int numero_irmaos) {
         this.numero_irmaos = numero_irmaos;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getTexto_prova() {
         return texto_prova;
     }
 
+    
+    /** 
+     * @param texto_prova
+     */
     public void setTexto_prova(String texto_prova) {
         this.texto_prova = texto_prova;
     }
 
+    
+    /** 
+     * @return boolean
+     */
     public boolean isPorta() {
         if (porta) {
             System.out.println("Porta Aberta");
@@ -90,6 +130,10 @@ public class Pagina99 {
         return porta;
     }
 
+    
+    /** 
+     * @param porta
+     */
     public void setPorta(boolean porta) {
         this.porta = porta;
     }

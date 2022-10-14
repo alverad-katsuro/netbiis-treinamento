@@ -4,7 +4,11 @@ import javax.swing.JOptionPane;
 
 public class NotasAlunos {
 
-	public static void main(String[] args) {
+	
+    /** 
+     * @param args
+     */
+    public static void main(String[] args) {
 		
 		int i,j,aprovados=0,reprovados=0;
 		double soma=0,media=0;

@@ -22,9 +22,17 @@ public class Onibus extends Veiculo {
         this.revendedor = revendedor;
     }
 
+    
+    /** 
+     * @param idAllOnibus
+     */
     public static void setIdAllOnibus(int idAllOnibus) {
         Onibus.idAllOnibus = idAllOnibus;
     }
+    
+    /** 
+     * @return int
+     */
     public static int getIdAllOnibus() {
         return idAllOnibus;
     }
@@ -32,18 +40,34 @@ public class Onibus extends Veiculo {
         Onibus.idAllOnibus = Onibus.idAllOnibus++;
     }
 
+    
+    /** 
+     * @return int
+     */
     public int getIdOnibus() {
         return idOnibus;
     }
 
+    
+    /** 
+     * @param idOnibus
+     */
     public void setIdOnibus(int idOnibus) {
         this.idOnibus = idOnibus;
     }
     
+    
+    /** 
+     * @return int
+     */
     public int getPassageiro(){
         return 16;
     }
 
+    
+    /** 
+     * @param velocidade
+     */
     @Override
     public void acelera(int velocidade) {
         setVelocidade(getVelocidade() + velocidade);

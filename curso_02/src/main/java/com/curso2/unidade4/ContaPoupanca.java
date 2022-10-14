@@ -8,6 +8,10 @@ public class ContaPoupanca extends Conta{
         super(cliente, saldo, limite_total, numero);
     }
 
+    
+    /** 
+     * @param taxa
+     */
     public void atualiza(double taxa){
         setSaldo(getSaldo() * (1 + taxa * 3));
     }

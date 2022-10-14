@@ -4,7 +4,11 @@ import javax.swing.JOptionPane;
 
 public class MenorValor {
 
-	public static void main(String[] args) {
+	
+    /** 
+     * @param args
+     */
+    public static void main(String[] args) {
 		
 		int valor, menor, maior; 
 

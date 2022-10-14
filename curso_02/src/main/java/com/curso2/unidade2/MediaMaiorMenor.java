@@ -4,10 +4,18 @@ import javax.swing.JOptionPane;
 
 public class MediaMaiorMenor {
     
+    
+    /** 
+     * @param args
+     */
     public static void main(String[] args) {
         resultados(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20);
     }
 
+    
+    /** 
+     * @param ...valores
+     */
     public static void resultados(float ...valores) {
         float maior = Float.MIN_VALUE;
         float menor = Float.MAX_VALUE;

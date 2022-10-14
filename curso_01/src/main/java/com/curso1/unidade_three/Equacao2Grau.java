@@ -4,7 +4,11 @@ import javax.swing.JOptionPane;
 
 public class Equacao2Grau {
 
-	public static void main(String[] args) {
+	
+    /** 
+     * @param args
+     */
+    public static void main(String[] args) {
 		int a, b, c;
 		double delta, x1, x2;
 		

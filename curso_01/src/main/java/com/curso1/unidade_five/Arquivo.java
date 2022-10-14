@@ -9,7 +9,12 @@ import com.curso1.unidade_four.Repetir;
 
 public class Arquivo {
 
-	public static void main(String[] args) throws Exception  {
+	
+    /** 
+     * @param args
+     * @throws Exception
+     */
+    public static void main(String[] args) throws Exception  {
 		FileWriter arquivo = new FileWriter("contatos.csv");
 		PrintWriter escrever = new PrintWriter(arquivo);
 		Repetir repetir = Repetir.CANCELAR;

@@ -23,9 +23,17 @@ public class Carro extends Veiculo {
         this.revendedor = revendedor;
     }
 
+    
+    /** 
+     * @param idAllCarro
+     */
     public static void setIdAllCarro(int idAllCarro) {
         Carro.idAllCarro = idAllCarro;
     }
+    
+    /** 
+     * @return int
+     */
     public static int getIdAllCarro() {
         return idAllCarro;
     }
@@ -33,14 +41,26 @@ public class Carro extends Veiculo {
         Carro.idAllCarro = Carro.idAllCarro++;
     }
 
+    
+    /** 
+     * @return int
+     */
     public int getIdCarro() {
         return idCarro;
     }
 
+    
+    /** 
+     * @param idCarro
+     */
     public void setIdCarro(int idCarro) {
         this.idCarro = idCarro;
     }
 
+    
+    /** 
+     * @return int
+     */
     public int getPassageiro(){
         return 4;
     }
@@ -53,10 +73,18 @@ public class Carro extends Veiculo {
         this.portaAberta = false; 
     }
 
+    
+    /** 
+     * @return boolean
+     */
     public boolean isPortaAberta() {
         return portaAberta;
     }
 
+    
+    /** 
+     * @param gasolinhaLitros
+     */
     public void abastace(float gasolinhaLitros){
         if (getGasolina() + gasolinhaLitros > getMax_gasolina()) {
             setGasolina(getMax_gasolina());
@@ -65,6 +93,10 @@ public class Carro extends Veiculo {
         }
     }
 
+    
+    /** 
+     * @param velocidade
+     */
     @Override
     public void acelera(int velocidade) {
         setVelocidade(getVelocidade() + velocidade);

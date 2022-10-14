@@ -7,22 +7,42 @@ import javax.swing.JOptionPane;
 public class Universidade {
     private ArrayList<Funcionario> funcionarios = new ArrayList<Funcionario>();
 
+    
+    /** 
+     * @param args
+     */
     public static void main(String[] args) {
         
     }
 
+    
+    /** 
+     * @return ArrayList<Funcionario>
+     */
     public ArrayList<Funcionario> getFuncionarios() {
         return funcionarios;
     }
 
+    
+    /** 
+     * @param funcionarios
+     */
     public void setFuncionarios(ArrayList<Funcionario> funcionarios) {
         this.funcionarios = funcionarios;
     }
 
+    
+    /** 
+     * @param funcionario
+     */
     public void addFuncionario(Funcionario funcionario){
         this.funcionarios.add(funcionario);
     }
 
+    
+    /** 
+     * @param funcionarios
+     */
     public static void gerarRelatorioProfessoresMestresDoutores(ArrayList<Funcionario> funcionarios){
         int graduacao = 0;
         int mestres = 0;

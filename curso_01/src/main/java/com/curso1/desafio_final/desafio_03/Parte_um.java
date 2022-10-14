@@ -1,6 +1,10 @@
 package com.curso1.desafio_final.desafio_03;
 
 public class Parte_um {
+    
+    /** 
+     * @param args
+     */
     public static void main(String[] args) {
         for (int i = 97; i <= 122; i++) {
             if (i == 122) {

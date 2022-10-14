@@ -4,7 +4,11 @@ import javax.swing.JOptionPane;
 
 public class CalculaVetor {
 
-	public static void main(String[] args) {
+	
+    /** 
+     * @param args
+     */
+    public static void main(String[] args) {
 		double A[] = new double[10];
 		double B[] = new double[10];
 		

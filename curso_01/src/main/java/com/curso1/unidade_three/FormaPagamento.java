@@ -4,7 +4,11 @@ import javax.swing.JOptionPane;
 
 public class FormaPagamento {
 
-	public static void main(String[] args) {
+	
+    /** 
+     * @param args
+     */
+    public static void main(String[] args) {
 		
         String pagamento[] = {"Avista - 10% Desconto", "Cartão - 5% Desconto", "2x sem juros", "3x com juros de 10%"};
 			

@@ -1,6 +1,10 @@
 package com.curso2.desafios;
 
 public class Teste_Loja {
+    
+    /** 
+     * @param args
+     */
     public static void main(String[] args) {
         new Produto("Laranja", 15, 1, 10);
         new Produto("Goiaba", 150, 1, 10);

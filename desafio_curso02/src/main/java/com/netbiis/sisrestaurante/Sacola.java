@@ -1,27 +1,53 @@
 package com.netbiis.sisrestaurante;
 
 import java.util.ArrayList;
-
+/**
+* Categoria que compõem o menu.
+* @author Alfredo Gabriel
+* @version 1.0
+* @since 13/10/2022
+*/
 public class Sacola {
     public ArrayList<Produto> produtos = new ArrayList<Produto>();
 
+    
+    
+    public Sacola() {
+    }
+    
+    /** 
+     * Retorna a lista com os produtos na sacola.
+     * @return ArrayList<Produto> - Objeto.
+     */
     public ArrayList<Produto> getProdutos() {
         return produtos;
     }
 
-    public Sacola() {
-    }
-
-
+    
+    /** 
+     * Sobreescreve a lista de produtos na sacola.
+     * @param produtos - Objeto.
+     */
     public void setProdutos(ArrayList<Produto> produtos) {
         this.produtos = produtos;
     }
 
+    
+    /** 
+     * Adiciona um produto x a sacola.
+     * @param produto - Objeto.
+     */
     public void addProduto(Produto produto){
         getProdutos().add(produto);
     }
 
 
+    
+    /** 
+     * Adiciona um produto x na sacola através do nome dele.
+     * @param nome - Nome do Objeto.
+     * @return boolean - confirmação
+     */
     public boolean addProduto(String nome){
         Produto produto = Produto.achaProduto(nome);
         if (produto != null) {
@@ -32,6 +58,13 @@ public class Sacola {
         }
     }
 
+    
+    /** 
+     * Adiciona uma quantidade Z do produto X na sacola através do nome dele.
+     * @param nome
+     * @param quantidade
+     * @return boolean
+     */
     public boolean addProduto(String nome, int quantidade){
         Produto produto = Produto.achaProduto(nome);
         if (produto != null) {
@@ -43,10 +76,21 @@ public class Sacola {
         }
     }
 
+    
+    /** 
+     * Remove um produto X da sacola.
+     * @param produto
+     */
     public void RemoveProduto(Produto produto){
         getProdutos().remove(produto);
     }
 
+    
+    /** 
+     * Remove um produto X da sacola através de seu nome.
+     * @param nome
+     * @return boolean
+     */
     public boolean RemoveProduto(String nome){
         Produto produto = Produto.achaProduto(nome);
         if (produto != null) {
@@ -57,6 +101,12 @@ public class Sacola {
         }
     }
 
+    
+    /** 
+     * Finaliza a compra do cliente exibindo seus dados, os produtos na sacola e redefine e retira todos os itens da sacola.
+     * @param cliente
+     * @return boolean
+     */
     public boolean finalizarCompra(Cliente cliente){
         if (this.produtos.size() > 0) {
             float preco_final = 0;
@@ -86,6 +136,11 @@ public class Sacola {
         }
     }
 
+    
+    /** 
+     * Cancela compra retirando todos os itens da sacola.
+     * @return boolean
+     */
     public boolean cancelarCompra(){
         setProdutos(new ArrayList<Produto>());
         return true;

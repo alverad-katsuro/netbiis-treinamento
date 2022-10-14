@@ -4,7 +4,11 @@ import javax.swing.JOptionPane;
 
 public class NumerosPares {
 
-	public static void main(String[] args) {
+	
+    /** 
+     * @param args
+     */
+    public static void main(String[] args) {
 		
         int a;
         do {

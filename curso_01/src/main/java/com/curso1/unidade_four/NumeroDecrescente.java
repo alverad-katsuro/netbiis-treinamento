@@ -4,7 +4,11 @@ import javax.swing.JOptionPane;
 
 public class NumeroDecrescente {
 
-	public static void main(String[] args) {
+	
+    /** 
+     * @param args
+     */
+    public static void main(String[] args) {
 		
 		int numero;
 		numero = Integer.parseInt(JOptionPane.showInputDialog(null, "Informe um numero"));

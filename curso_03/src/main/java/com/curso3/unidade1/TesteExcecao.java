@@ -2,6 +2,12 @@ package com.curso3.unidade1;
 
 public class TesteExcecao {
 
+    
+    /** 
+     * @param a
+     * @param b
+     * @throws ArithmeticException
+     */
     public static void dividir(int a, int b) throws ArithmeticException {
         try {
             System.out.println("O resultado " + (a / b));
@@ -11,6 +17,9 @@ public class TesteExcecao {
         }
     }
     
+    /** 
+     * @throws NullPointerException
+     */
     public static void imp() throws NullPointerException {
         try {
             Object c = null;
@@ -21,6 +30,10 @@ public class TesteExcecao {
         }
     }
 
+    
+    /** 
+     * @param args[]
+     */
     public static void main(String args[]) {
         dividir(50, 0);
         imp();

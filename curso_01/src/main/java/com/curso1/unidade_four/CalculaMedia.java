@@ -4,7 +4,11 @@ import javax.swing.JOptionPane;
 
 public class CalculaMedia {
 
-	public static void main(String[] args) {
+	
+    /** 
+     * @param args
+     */
+    public static void main(String[] args) {
 		
 		System.out.println("Favor informar o valor");
 		float valor = Float.parseFloat(JOptionPane.showInputDialog(null, "Informe um valor"));

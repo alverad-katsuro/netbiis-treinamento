@@ -4,7 +4,11 @@ import java.util.Scanner;
 
 public class MenorMaiorMedia {
 
-	public static void main(String[] args) {
+	
+    /** 
+     * @param args
+     */
+    public static void main(String[] args) {
 		
 		double valor, menor, maior,media = 0; 
 		int cont = 0;

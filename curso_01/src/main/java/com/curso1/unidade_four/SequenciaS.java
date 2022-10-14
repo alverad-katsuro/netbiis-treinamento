@@ -2,7 +2,11 @@ package com.curso1.unidade_four;
 
 public class SequenciaS {
 
-	public static void main(String[] args) {
+	
+    /** 
+     * @param args
+     */
+    public static void main(String[] args) {
 		
 		int s[] = new int[5];
 		s[0] = 1;		

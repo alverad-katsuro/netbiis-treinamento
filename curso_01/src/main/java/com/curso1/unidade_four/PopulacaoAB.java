@@ -4,7 +4,11 @@ import javax.swing.JOptionPane;
 
 public class PopulacaoAB {
 
-	public static void main(String[] args) {
+	
+    /** 
+     * @param args
+     */
+    public static void main(String[] args) {
 		
         final double taxaA = 0.03;
 		final double taxaB = 0.02;

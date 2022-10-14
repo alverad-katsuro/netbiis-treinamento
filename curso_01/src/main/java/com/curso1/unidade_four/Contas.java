@@ -4,7 +4,11 @@ import javax.swing.JOptionPane;
 
 public class Contas {
 
-	public static void main(String[] args) {
+	
+    /** 
+     * @param args
+     */
+    public static void main(String[] args) {
 		
 		int numero_contas = -1;
 		double saldo, saldo_total = 0;

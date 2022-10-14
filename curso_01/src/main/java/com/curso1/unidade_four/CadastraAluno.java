@@ -8,6 +8,10 @@ import com.curso1.unidade_two.Aluno;
 
 public class CadastraAluno {
 
+    
+    /** 
+     * @param args
+     */
     public static void main(String[] args) {
         String matricula = JOptionPane.showInputDialog(null, "Informe a matricula\n0 - Para Finalizar");
 		ArrayList<Aluno> alunos = new ArrayList<Aluno>();

@@ -3,6 +3,10 @@ package com.curso1.unidade_two;
 import javax.swing.JOptionPane;
 
 public class Filme {
+    
+    /** 
+     * @param args
+     */
     public static void main(String[] args) {
         String nome_filme = JOptionPane.showInputDialog("Digite o nome do filme");
         int horas = Integer.parseInt(JOptionPane.showInputDialog("Digite a quantidade de horas"));

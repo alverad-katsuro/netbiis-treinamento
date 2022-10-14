@@ -3,7 +3,12 @@ package com.curso2.unidade2;
 public class MatrizIdentidade {
     private static final int TAMANHO_MATRIX = 3;
 
-	public static void main(String[] args) throws Exception {
+	
+    /** 
+     * @param args
+     * @throws Exception
+     */
+    public static void main(String[] args) throws Exception {
 		int identidade[][] = new int[TAMANHO_MATRIX][TAMANHO_MATRIX];
 		
 		for(int i = 0; i < TAMANHO_MATRIX; i++){

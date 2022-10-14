@@ -3,6 +3,10 @@ package com.curso1.unidade_two;
 import javax.swing.JOptionPane;
 
 public class LanHouse {
+    
+    /** 
+     * @param args
+     */
     public static void main(String[] args) {
         int tempo = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite o tempo de permanencia do usuário em minutos: "));
         float preco = (tempo / 15) * 2.0f;

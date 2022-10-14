@@ -5,7 +5,11 @@ import javax.swing.JOptionPane;
 
 public class MostraTabuada {
 
-	public static void main(String[] args) {
+	
+    /** 
+     * @param args
+     */
+    public static void main(String[] args) {
 		
 		int numero;
 		
@@ -13,6 +17,10 @@ public class MostraTabuada {
 		tabuada(numero);
 	}
 
+    
+    /** 
+     * @param numero
+     */
     public static void tabuada(int numero){
 		String resposta = "";
         int total = 1;

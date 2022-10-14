@@ -21,34 +21,74 @@ public class Cliente {
     }
 
 
+    
+    /** 
+     * @return int
+     */
     public static int getIdAllClient() {
         return idAllClient;
     }
 
+    
+    /** 
+     * @param idAllClient
+     */
     public static void setIdAllClient(int idAllClient) {
         Cliente.idAllClient = idAllClient;
     }
+    
+    /** 
+     * @return int
+     */
     public int getIdClient() {
         return idClient;
     }
+    
+    /** 
+     * @param idClient
+     */
     public void setIdClient(int idClient) {
         this.idClient = idClient;
     }
+    
+    /** 
+     * @return String
+     */
     public String getCpf() {
         return cpf;
     }
+    
+    /** 
+     * @param cpf
+     */
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
+    
+    /** 
+     * @return String
+     */
     public String getNome() {
         return nome;
     }
+    
+    /** 
+     * @param nome
+     */
     public void setNome(String nome) {
         this.nome = nome;
     }
+    
+    /** 
+     * @return String
+     */
     public String getCnh() {
         return cnh;
     }
+    
+    /** 
+     * @param cnh
+     */
     public void setCnh(String cnh) {
         this.cnh = cnh;
     }    

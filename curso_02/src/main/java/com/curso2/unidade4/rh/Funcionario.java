@@ -8,6 +8,10 @@ public abstract class Funcionario {
     protected String cpf;
 
 
+    
+    /** 
+     * @param args
+     */
     public static void main(String[] args) {
         Funcionario diretor = new Diretor();
         Funcionario professor = new Professor();
@@ -17,6 +21,10 @@ public abstract class Funcionario {
         verificarTipoFuncionario(professor);
     }
 
+    
+    /** 
+     * @param obj
+     */
     public static void verificarTipoFuncionario(Funcionario obj){
         if (obj instanceof Diretor) {
             JOptionPane.showMessageDialog(null, "É diretor");
@@ -30,26 +38,50 @@ public abstract class Funcionario {
 
     public abstract double getBonificacao();
 
+    
+    /** 
+     * @return float
+     */
     public float getSalario() {
         return salario;
     }
 
+    
+    /** 
+     * @param salario
+     */
     public void setSalario(float salario) {
         this.salario = salario;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getRG() {
         return rg;
     }
 
+    
+    /** 
+     * @param rg
+     */
     public void setRG(String rg) {
         this.rg = rg;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getCPF() {
         return cpf;
     }
 
+    
+    /** 
+     * @param cpf
+     */
     public void setCPF(String cpf) {
         this.cpf = cpf;
     }

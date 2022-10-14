@@ -22,9 +22,17 @@ public class Moto extends Veiculo {
         this.revendedor = revendedor;
     }
 
+    
+    /** 
+     * @param idAllMoto
+     */
     public static void setIdAllMoto(int idAllMoto) {
         Moto.idAllMoto = idAllMoto;
     }
+    
+    /** 
+     * @return int
+     */
     public static int getIdAllMoto() {
         return idAllMoto;
     }
@@ -32,18 +40,34 @@ public class Moto extends Veiculo {
         Moto.idAllMoto = Moto.idAllMoto++;
     }
 
+    
+    /** 
+     * @return int
+     */
     public int getIdMoto() {
         return idMoto;
     }
 
+    
+    /** 
+     * @param idMoto
+     */
     public void setIdMoto(int idMoto) {
         this.idMoto = idMoto;
     }
     
+    
+    /** 
+     * @return int
+     */
     public int getPassageiro(){
         return 2;
     }
 
+    
+    /** 
+     * @param velocidade
+     */
     @Override
     public void acelera(int velocidade) {
         setVelocidade(getVelocidade() + velocidade);

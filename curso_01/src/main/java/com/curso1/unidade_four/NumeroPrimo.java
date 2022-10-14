@@ -4,7 +4,11 @@ import javax.swing.JOptionPane;
 
 public class NumeroPrimo {
 
-	public static void main(String[] args) {
+	
+    /** 
+     * @param args
+     */
+    public static void main(String[] args) {
 		int numero = Integer.parseInt(JOptionPane.showInputDialog("Digite o número"));
 		int numero_divisores = 0;
 		
