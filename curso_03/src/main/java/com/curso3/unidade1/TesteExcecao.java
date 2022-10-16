@@ -20,6 +20,7 @@ public class TesteExcecao {
     /** 
      * @throws NullPointerException
      */
+    @SuppressWarnings({"null"})
     public static void imp() throws NullPointerException {
         try {
             Object c = null;
