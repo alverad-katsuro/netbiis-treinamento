@@ -5,7 +5,7 @@ import java.util.List;
 
 public class ParallelStreamApp {
     public static void main(String[] args) {
-        //colecaoStream(); // 4670 milisegundos
+        colecaoStream(); // 4670 milisegundos
         colecaoParallelStream(); // 5426 ???
     }
 
