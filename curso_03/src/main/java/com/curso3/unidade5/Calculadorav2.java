@@ -1,6 +1,6 @@
 package com.curso3.unidade5;
 
-public class Calculadorav2 {
+public class Calculadorav2 implements Formula {
     public static void main(String[] args) {
         Calculadorav2 ex = new Calculadorav2();
         IMath somar = (a,b)-> a+b; //Expressão Lambda
@@ -19,5 +19,11 @@ public class Calculadorav2 {
     
     public double execOperacao(double a, double b, IMath op) {
         return op.operacao(a, b);
+    }
+
+    @Override
+    public double calcular(int a) {
+        // TODO Auto-generated method stub
+        return 0;
     }
 }

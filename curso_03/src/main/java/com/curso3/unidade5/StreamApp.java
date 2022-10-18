@@ -1,0 +1,47 @@
+package com.curso3.unidade5;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class StreamApp {
+    static List<String> pessoas = new ArrayList<String>();
+
+    public static void main(String[] args) {
+        pessoas.add("Aurora");
+        pessoas.add("Alfredo");
+        pessoas.add("Gabriel");
+        pessoas.add("Fernando");
+        pessoas.add("João");
+
+        /*
+         *
+         pessoas.stream().map(String::toUpperCase).sorted((a,b) -> b.compareTo(a)).forEach(System.out::println);
+         
+         boolean anyStartsWithA =
+         pessoas.stream().anyMatch((s) -> s.startsWith("A"));
+         System.out.println(anyStartsWithA); // true
+         boolean allStartsWithA =
+         pessoas.stream().allMatch((s) -> s.startsWith("A"));
+         System.out.println(allStartsWithA); // false
+         boolean noneStartsWithZ =
+         pessoas.stream().noneMatch((s) -> s.startsWith("z"));
+         System.out.println(noneStartsWithZ); // true
+         */
+        filtrar("A");
+        ordenar("A");
+        contar("A");
+
+    }
+    
+    public static void filtrar(String letra){
+        pessoas.stream().filter(s -> s.startsWith(letra)).forEach(System.out::println);
+    }
+    public static void ordenar(String letra){
+        pessoas.stream().sorted().filter(s -> s.startsWith(letra)).forEach(System.out::println);
+        
+    }
+    public static void contar(String letra) {
+        System.out.println(pessoas.stream().filter(s -> s.startsWith(letra)).count());
+        
+    }
+}
