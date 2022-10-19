@@ -37,11 +37,11 @@ public class Cliente2 {
         System.out.println("Cursos feitos não feitos por " + cliente2.getNome());
         System.out.println(cliente.getCursos());
         
-        listarCurso(cliente.getCursos());
         cliente.getCursos().forEach(System.out::println);
-        */
         Consumer<Set<Curso>> consumer = Cliente2::listarCurso;
         consumer.accept(cliente.getCursos());  
+        */
+        listarCurso(cliente.getCursos());
     }
 
     public void addCurso(Curso curso){

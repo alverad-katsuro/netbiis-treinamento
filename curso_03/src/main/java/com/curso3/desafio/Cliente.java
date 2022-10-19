@@ -1,6 +1,9 @@
-package com.curso3.unidade4;
+package com.curso3.desafio;
 
 import java.util.Map;
+
+import com.curso3.unidade4.Curso;
+
 import java.util.HashMap;
 
 public class Cliente {
