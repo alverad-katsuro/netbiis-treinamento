@@ -23,7 +23,6 @@ public class Calculadorav2 implements Formula {
 
     @Override
     public double calcular(int a) {
-        // TODO Auto-generated method stub
         return 0;
     }
 }

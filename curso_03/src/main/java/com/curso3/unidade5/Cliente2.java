@@ -38,9 +38,9 @@ public class Cliente2 {
         System.out.println(cliente.getCursos());
         
         cliente.getCursos().forEach(System.out::println);
+        */
         Consumer<Set<Curso>> consumer = Cliente2::listarCurso;
         consumer.accept(cliente.getCursos());  
-        */
         listarCurso(cliente.getCursos());
     }
 
