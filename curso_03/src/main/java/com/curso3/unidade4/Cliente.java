@@ -3,7 +3,7 @@ package com.curso3.unidade4;
 import java.util.Map;
 import java.util.HashMap;
 
-public class Cliente {
+public class Cliente implements Comparable<Cliente>{
     private String nome;
     Map<Integer, Curso> cursos = new HashMap<Integer, Curso>();
     
@@ -49,4 +49,14 @@ public class Cliente {
     public void setNome(String nome) {
         this.nome = nome;
     }
+
+    @Override
+    public int compareTo(Cliente cliente){
+        if (this.getNome() == null || cliente.getNome() == null) {
+            return 0;
+        }
+        return getNome().compareTo(cliente.getNome());
+    }
+    
+
 }

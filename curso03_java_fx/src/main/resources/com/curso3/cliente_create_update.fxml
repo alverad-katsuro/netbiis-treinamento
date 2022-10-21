@@ -6,7 +6,8 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.curso3.PrimaryController">
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <MenuBar prefHeight="27.0" prefWidth="640.0">
         <menus>
@@ -32,8 +33,8 @@
           </Menu>
         </menus>
       </MenuBar>
-      <Button fx:id="B_trocaCliente" layoutX="238.0" layoutY="84.0" mnemonicParsing="false" onAction="#switchToCliente" prefHeight="57.0" prefWidth="165.0" text="Cliente" />
-      <Button fx:id="B_trocaCurso" layoutX="238.0" layoutY="212.0" mnemonicParsing="false" onAction="#switchToCurso" prefHeight="57.0" prefWidth="165.0" text="Curso" />
-      <Button fx:id="B_trocaVenda" layoutX="238.0" layoutY="343.0" mnemonicParsing="false" onAction="#switchToVenda" prefHeight="57.0" prefWidth="165.0" text="Vender" />
+      <Button layoutX="238.0" layoutY="84.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="165.0" text="Cliente" />
+      <Button layoutX="238.0" layoutY="212.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="165.0" text="Curso" />
+      <Button layoutX="238.0" layoutY="343.0" mnemonicParsing="false" prefHeight="57.0" prefWidth="165.0" text="Vender" />
    </children>
 </Pane>
