@@ -1,4 +1,4 @@
-package com.curso3;
+package com.example;
 
 import java.io.IOException;
 import javafx.fxml.FXML;
