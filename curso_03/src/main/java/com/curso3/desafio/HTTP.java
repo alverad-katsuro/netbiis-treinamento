@@ -1,4 +1,4 @@
-package com.curso3.unidade1.desafio;
+package com.curso3.desafio;
 
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 
 import java.net.http.HttpResponse;
 
-public class Alguma_Coisa {
+public class HTTP {
     public static void main(String[] args) {
         HttpClient client = HttpClient.newHttpClient();
         String url = JOptionPane.showInputDialog(null, "Digite uma url");
