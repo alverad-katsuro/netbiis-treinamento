@@ -33,10 +33,15 @@ public class LojaVirtual {
         
         loja.pagamento(clientes.get(0), cursos);
         
+        loja.listarCursos(cursos);
         loja.pagamento(clientes.get(1), cursos2);
         loja.ordernar("B");
         loja.lucro();
         loja.gasto();
+    }
+
+    public void listarCursos(List<Curso> cursos){
+        cursos.forEach(System.out::println);
     }
 
     public void pagamento(Cliente3 cliente, List<Curso> curso){
