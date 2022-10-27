@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.curso3.ClienteController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.curso3.CursoController">
    <children>
       <Label layoutX="229.0" layoutY="29.0" prefHeight="55.0" prefWidth="183.0" text="Formulario Curso">
          <font>
@@ -37,7 +37,7 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <Button fx:id="B_salvar" layoutX="255.0" layoutY="395.0" mnemonicParsing="false" onAction="#createCliente" text="Salvar" />
+      <Button fx:id="B_salvar" layoutX="255.0" layoutY="395.0" mnemonicParsing="false" onAction="#createCurso" text="Salvar" />
       <Button fx:id="B_cancelar" layoutX="331.0" layoutY="395.0" mnemonicParsing="false" onAction="#cancelar" text="Cancelar" />
       <TextArea fx:id="TA_descricao" layoutX="60.0" layoutY="295.0" prefHeight="88.0" prefWidth="520.0" promptText="Digite a descrição do curso aqui." />
    </children>

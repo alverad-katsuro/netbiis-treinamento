@@ -21,16 +21,14 @@
                <items>
                   <MenuItem mnemonicParsing="false" onAction="#switchToCursoFind" text="Consultar" />
                   <MenuItem mnemonicParsing="false" onAction="#switchToCursoCreate" text="Cadastrar" />
-                  <MenuItem mnemonicParsing="false" onAction="#switchToCursoUpdate" text="Editar" />
-                  <MenuItem mnemonicParsing="false" onAction="#switchToCursoDelete" text="Deletar" />
+                  <MenuItem mnemonicParsing="false" onAction="#switchToCursoFind" text="Editar" />
+                  <MenuItem mnemonicParsing="false" onAction="#switchToCursoFind" text="Deletar" />
                </items>
             </Menu>
             <Menu mnemonicParsing="false" text="Venda">
                <items>
                   <MenuItem mnemonicParsing="false" onAction="#switchToVendaCreate" text="Consultar" />
                   <MenuItem mnemonicParsing="false" onAction="#switchToVendaCreate" text="Cadastrar" />
-                  <MenuItem mnemonicParsing="false" onAction="#switchToVendaUpdate" text="Editar" />
-                  <MenuItem mnemonicParsing="false" onAction="#switchToVendaDelete" text="Deletar" />
                </items>
             </Menu>
           <Menu mnemonicParsing="false" text="Ajuda">

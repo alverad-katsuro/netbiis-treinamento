@@ -65,34 +65,15 @@ public class PrimaryController {
      */
     @FXML
     private void switchToCursoCreate() throws IOException {
-        App.setRoot("cursoCreateUpdate");
+        setP_block("cursoFormulario");
     }
-
-    
-    /** 
-     * @throws IOException
-     */
-    @FXML
-    private void switchToCursoUpdate() throws IOException {
-        App.setRoot("cursoCreateUpdate");
-    }
-
-    
-    /** 
-     * @throws IOException
-     */
-    @FXML
-    private void switchToCursoDelete() throws IOException {
-        App.setRoot("cursoCreateUpdate");
-    }
-
     
     /** 
      * @throws IOException
      */
     @FXML
     private void switchToCursoFind() throws IOException {
-        App.setRoot("cursoCreateUpdate");
+        setP_block("cursoSearch");
     }
 
     
@@ -101,24 +82,7 @@ public class PrimaryController {
      */
     @FXML
     private void switchToVendaCreate() throws IOException {
-        App.setRoot("vendaCreateUpdate");
-    }
-
-    
-    /** 
-     * @throws IOException
-     */
-    @FXML
-    private void switchToVendaUpdate() throws IOException {
-        App.setRoot("vendaCreateUpdate");
-    }
-    
-    /** 
-     * @throws IOException
-     */
-    @FXML
-    private void switchToVendaDelete() throws IOException {
-        App.setRoot("vendaCreateUpdate");
+        setP_block("vendaFormulario");
     }
 
     @FXML

@@ -29,6 +29,8 @@ public class App extends Application {
         Parent loader = fxmlLoader.load();
         scene = new Scene(loader, 640, 480);
         Cliente cliente = new Cliente("aaa", "aaa", "aaa", "aaaa", "aaaa");
+        Curso curso = new Curso("Curso01", "alguma descricao", 15000, "www.google.com");
+        addCurso(curso);
         addCliente(cliente);
         stage.setScene(scene);
         stage.setResizable(false);
@@ -84,6 +86,14 @@ public class App extends Application {
 
     public static void addCurso(int key, Curso curso){
         getCursos().put(key, curso);
+    }
+
+    public static void addCurso(Curso curso){
+        getCursos().put(curso.getId(), curso);
+    }
+
+    public static void removeCurso(Curso curso){
+        getCursos().remove(curso.getId());
     }
 
     public static Map<Integer, Curso> getCursos() {
