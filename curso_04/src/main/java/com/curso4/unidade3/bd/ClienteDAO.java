@@ -13,28 +13,32 @@ public final class ClienteDAO extends ConfiguracaoBD implements ICrud<Cliente> {
 
     public void inserirSP(Cliente cliente) throws SQLException{
         conectar();
-        String comando_sql = "CALL formacaojava.SP_INSERIR_CLIENTE(?, ?, ?)";
+        String comando_sql = "CALL lojavirtual.SP_INSERIR_CLIENTE(?, ?, ?, ?, ?)";
         CallableStatement cst = conexao.prepareCall(comando_sql);
-        cst.setString(1, cliente.getCPF());
-        cst.setString(2, cliente.getNome());
-        cst.setString(3, cliente.getEmail());
+        cst.setString(1, cliente.getNome());
+        cst.setString(2, cliente.getSobrenome());
+        cst.setString(3, cliente.getCPF());
+        cst.setString(4, cliente.getEmail());
+        cst.setString(5, cliente.getTelefone());
         cst.execute();
+        conexao.commit();
         desconectar();
     }
     
     @Override
     public boolean create(Cliente cliente) throws SQLException {
         conectar();
-        String comando_sql = "insert into Cliente (cliente_id, cliente_nome, cliente_sobrenome, cliente_email, cliente_telefone, cliente_cpf) values (?,?,?,?,?,?)";
+        String comando_sql = "insert into Cliente (cliente_nome, cliente_sobrenome, cliente_email, cliente_telefone, cliente_cpf) values (?,?,?,?,?)";
         try {
             PreparedStatement pst = conexao.prepareStatement(comando_sql);
-            pst.setInt(1, cliente.getId());
-            pst.setString(2, cliente.getNome());
-            pst.setString(3, cliente.getSobrenome());
-            pst.setString(4, cliente.getEmail());
-            pst.setString(5, cliente.getTelefone());
-            pst.setString(6, cliente.getCPF());
+            pst.setString(1, cliente.getNome());
+            pst.setString(2, cliente.getSobrenome());
+            pst.setString(3, cliente.getEmail());
+            pst.setString(4, cliente.getTelefone());
+            pst.setString(5, cliente.getCPF());
             pst.executeUpdate();
+            pst.execute();
+            conexao.commit();
             desconectar();
             return true;
         }catch(Exception e){
@@ -47,11 +51,12 @@ public final class ClienteDAO extends ConfiguracaoBD implements ICrud<Cliente> {
     @Override
     public boolean delete(Cliente cliente) throws SQLException {
         conectar();
-        String comando_sql = "DELETE FROM Cliente where id=?";
+        String comando_sql = "DELETE FROM Cliente where cliente_id=?";
         try {
             PreparedStatement pst = conexao.prepareStatement(comando_sql);
             pst.setInt(1, cliente.getId());
             pst.executeUpdate();
+            conexao.commit();
             desconectar();
             return true;
         }catch(Exception e){
@@ -101,6 +106,7 @@ public final class ClienteDAO extends ConfiguracaoBD implements ICrud<Cliente> {
             pst.setString(5, cliente.getCPF());
             pst.setString(6, String.valueOf(cliente.getId()));
             pst.executeUpdate();
+            conexao.commit();
             desconectar();
             return true;
         } catch (Exception e) {

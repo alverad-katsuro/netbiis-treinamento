@@ -1,8 +1,10 @@
-com/curso3/VendaController.class
 com/curso3/ClienteController.class
+com/curso3/App.class
+com/backend/bd/ConsultarCliente.class
+com/backend/Curso.class
+com/backend/bd/ConfiguracaoBD.class
+com/backend/Cliente.class
+com/curso3/VendaController.class
 com/curso3/CursoController.class
 module-info.class
-com/curso3/App.class
 com/curso3/PrimaryController.class
-com/backend/Curso.class
-com/backend/Cliente.class

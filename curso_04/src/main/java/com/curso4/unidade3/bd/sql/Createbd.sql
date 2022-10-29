@@ -1,18 +1,21 @@
+use lojavirtual;
+
 CREATE TABLE Cliente (
 	cliente_id int(20) NOT NULL AUTO_INCREMENT,
-	cliente_nome varchar(20) NOT NULL,
-	cliente_sobrenome varchar(40) NOT NULL,
-	cliente_email varchar(30) NOT NULL,
-	cliente_telefone varchar(16) NOT NULL,
-	cliente_cpf varchar(14) NOT NULL,
+	cliente_nome varchar(20),
+	cliente_sobrenome varchar(40),
+	cliente_email varchar(30),
+	cliente_telefone varchar(16),
+	cliente_cpf varchar(14),
 	PRIMARY KEY (cliente_id)
 );
 
 CREATE TABLE Curso (
 	curso_id int(20) NOT NULL AUTO_INCREMENT,
-	curso_nome varchar(40) NOT NULL,
-	curso_descricao varchar(80) NOT NULL,
-	curso_valor double(30,2) NOT NULL,
+	curso_nome varchar(40),
+	curso_descricao varchar(80),
+	curso_valor double(30,2),
+    curso_url varchar(40),
 	PRIMARY KEY (curso_id)
 );
 
