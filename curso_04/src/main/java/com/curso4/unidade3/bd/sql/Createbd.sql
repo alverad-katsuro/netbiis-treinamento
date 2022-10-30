@@ -21,7 +21,8 @@ CREATE TABLE Curso (
 
 CREATE TABLE cliente_has_curso (
 	cliente_id int(20) NOT NULL,
-	curso_id int(20) NOT NULL
+	curso_id int(20) NOT NULL,
+    venda_data DateTime NOT NULL
 );
 
 

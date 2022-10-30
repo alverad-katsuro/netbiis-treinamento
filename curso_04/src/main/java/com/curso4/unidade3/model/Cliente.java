@@ -1,7 +1,6 @@
 package com.curso4.unidade3.model;
 
 public class Cliente {
-    public static int ID_ALL = 0;
     private int id;
     private String nome;
     private String sobrenome;
@@ -10,8 +9,6 @@ public class Cliente {
     private String CPF;
 
     public Cliente(String nome, String sobrenome, String email, String telefone, String CPF) {
-        this.id = Cliente.getID_ALL() + 1;
-        Cliente.setID_ALL(Cliente.getID_ALL() + 1);
         this.nome = nome;
         this.sobrenome = sobrenome;
         this.email = email;
@@ -71,14 +68,6 @@ public class Cliente {
 
     public void setCPF(String CPF) {
         this.CPF = CPF;
-    }
-
-    public static int getID_ALL() {
-        return ID_ALL;
-    }
-
-    public static void setID_ALL(int iD_ALL) {
-        ID_ALL = iD_ALL;
     }
 
     public int getId() {

@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public sealed class ConfiguracaoBD permits ClienteDAO, CursoDAO {
+public sealed class ConfiguracaoBD permits ClienteDAO, CursoDAO, VendaDAO {
 
 	static final String driver = "com.mysql.cj.jdbc.Driver";
 	static final String user = "loja";
@@ -14,9 +14,7 @@ public sealed class ConfiguracaoBD permits ClienteDAO, CursoDAO {
 	static final String url = "jdbc:mysql://localhost:3306/lojavirtual";
     static Connection conexao;
 	
-
-    
-    
+  
     public static void main(String[] args) throws SQLException {
         conectar();
         try {

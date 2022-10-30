@@ -36,7 +36,6 @@ public final class ClienteDAO extends ConfiguracaoBD implements ICrud<Cliente> {
             pst.setString(3, cliente.getEmail());
             pst.setString(4, cliente.getTelefone());
             pst.setString(5, cliente.getCPF());
-            pst.executeUpdate();
             pst.execute();
             conexao.commit();
             desconectar();
@@ -64,7 +63,6 @@ public final class ClienteDAO extends ConfiguracaoBD implements ICrud<Cliente> {
             System.out.println(e);
             return false;
         }
-        
     }
 
     @Override
