@@ -1,3 +1,5 @@
+use lojavirtual;
+
 CREATE TABLE Cliente (
 	cliente_id int(20) NOT NULL AUTO_INCREMENT,
 	cliente_nome varchar(20) NOT NULL,
@@ -16,18 +18,19 @@ CREATE TABLE Curso (
 	PRIMARY KEY (curso_id)
 );
 
-CREATE TABLE cliente_has_curso (
+CREATE TABLE Cliente_has_Curso (
 	cliente_id int(20) NOT NULL,
-	curso_id int(20) NOT NULL
+	curso_id int(20) NOT NULL,
+    data_venda datetime NOT NULL
 );
 
 
 
-ALTER TABLE cliente_has_curso ADD CONSTRAINT cliente_has_curso_fk0 FOREIGN KEY (cliente_id) REFERENCES Cliente(cliente_id);
+ALTER TABLE Cliente_has_Curso ADD CONSTRAINT Cliente_has_Curso_fk0 FOREIGN KEY (cliente_id) REFERENCES Cliente(cliente_id);
 
-ALTER TABLE cliente_has_curso ADD CONSTRAINT cliente_has_curso_fk1 FOREIGN KEY (curso_id) REFERENCES Curso(curso_id);
+ALTER TABLE Cliente_has_Curso ADD CONSTRAINT Cliente_has_Curso_fk1 FOREIGN KEY (curso_id) REFERENCES Curso(curso_id);
 
-ALTER TABLE cliente_has_curso add CONSTRAINT pk_clienteCurso primary key (cliente_id, curso_id);
+ALTER TABLE Cliente_has_Curso add CONSTRAINT pk_clienteCurso primary key (cliente_id, curso_id);
 
 
 

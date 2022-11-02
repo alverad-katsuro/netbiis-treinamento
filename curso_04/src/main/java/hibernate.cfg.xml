@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory name="sessionFactory">
+  <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+  <property name="hibernate.connection.password">senhaloja</property>
+  <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/lojavirtual</property>
+  <property name="hibernate.connection.username">loja</property>
+  <property name="hibernate.default_catalog">lojavirtual</property>
+  <property name="hibernate.default_schema">lojavirtual</property>
+  <mapping resource="com/curso4/unidade3/model/Curso.hbm.xml" />
+  <mapping resource="com/curso4/unidade3/model/Cliente.hbm.xml" />
+  <!-- 
+      <mapping resource="com/curso4/unidade3/model/ClienteHasCurso.hbm.xml" />
+  -->
+ </session-factory>
+</hibernate-configuration>

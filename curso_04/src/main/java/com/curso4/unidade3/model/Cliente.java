@@ -1,44 +1,28 @@
 package com.curso4.unidade3.model;
 
-public class Cliente {
-    private int id;
-    private String nome;
-    private String sobrenome;
-    private String email;
-    private String telefone;
-    private String CPF;
+public class Cliente implements java.io.Serializable {
+    private int clienteId;
+    private String clienteNome;
+    private String clienteSobrenome;
+    private String clienteEmail;
+    private String clienteTelefone;
+    private String clienteCpf;
 
     public Cliente(String nome, String sobrenome, String email, String telefone, String CPF) {
-        this.nome = nome;
-        this.sobrenome = sobrenome;
-        this.email = email;
-        this.telefone = telefone;
-        this.CPF = CPF;
+        this.clienteNome = nome;
+        this.clienteSobrenome = sobrenome;
+        this.clienteEmail = email;
+        this.clienteTelefone = telefone;
+        this.clienteCpf = CPF;
     }
 
     public Cliente(int id, String nome, String sobrenome, String email, String telefone, String CPF) {
-        this.id = id;
-        this.nome = nome;
-        this.sobrenome = sobrenome;
-        this.email = email;
-        this.telefone = telefone;
-        this.CPF = CPF;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getSobrenome() {
-        return sobrenome;
-    }
-
-    public void setSobrenome(String sobrenome) {
-        this.sobrenome = sobrenome;
+        this.clienteId = id;
+        this.clienteNome = nome;
+        this.clienteSobrenome = sobrenome;
+        this.clienteEmail = email;
+        this.clienteTelefone = telefone;
+        this.clienteCpf = CPF;
     }
 
     @Override
@@ -46,36 +30,53 @@ public class Cliente {
         return "Cliente [nome=" + nome + ", sobrenome=" + sobrenome + ", CPF=" + CPF + "]";
     }
 
-    public String getEmail() {
-        return email;
+    public int getClienteId() {
+        return clienteId;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setClienteId(int clienteId) {
+        this.clienteId = clienteId;
     }
 
-    public String getTelefone() {
-        return telefone;
+    public String getClienteNome() {
+        return clienteNome;
     }
 
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
+    public void setClienteNome(String clienteNome) {
+        this.clienteNome = clienteNome;
     }
 
-    public String getCPF() {
-        return CPF;
+    public String getClienteSobrenome() {
+        return clienteSobrenome;
     }
 
-    public void setCPF(String CPF) {
-        this.CPF = CPF;
+    public void setClienteSobrenome(String clienteSobrenome) {
+        this.clienteSobrenome = clienteSobrenome;
     }
 
-    public int getId() {
-        return id;
+    public String getClienteEmail() {
+        return clienteEmail;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setClienteEmail(String clienteEmail) {
+        this.clienteEmail = clienteEmail;
     }
 
+    public String getClienteTelefone() {
+        return clienteTelefone;
+    }
+
+    public void setClienteTelefone(String clienteTelefone) {
+        this.clienteTelefone = clienteTelefone;
+    }
+
+    public String getClienteCpf() {
+        return clienteCpf;
+    }
+
+    public void setClienteCpf(String clienteCpf) {
+        this.clienteCpf = clienteCpf;
+    }
+
+    
 }

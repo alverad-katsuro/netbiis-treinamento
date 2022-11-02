@@ -8,9 +8,9 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.curso4.unidade3.model.Venda;
+import com.curso4.unidade3.model.ClienteHasCurso;
 
-public final class VendaDAO extends ConfiguracaoBD implements ICrud<Venda> {
+public final class VendaDAO extends ConfiguracaoBD implements ICrud<ClienteHasCurso> {
 
     @Override
     public boolean create(Venda venda) throws SQLException {
@@ -96,3 +96,4 @@ public final class VendaDAO extends ConfiguracaoBD implements ICrud<Venda> {
     }
     
 }
+    

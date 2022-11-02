@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 1 de nov. de 2022 21:37:07 by Hibernate Tools 5.6.12.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.curso4.unidade3.model.Curso" optimistic-lock="none" table="Curso">
+        <id name="cursoId" type="java.lang.Integer">
+            <column name="curso_id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="cursoNome" type="string">
+            <column length="40" name="curso_nome" not-null="true"/>
+        </property>
+        <property name="cursoDescricao" type="string">
+            <column length="80" name="curso_descricao" not-null="true"/>
+        </property>
+        <property name="cursoValor" type="double">
+            <column name="curso_valor" not-null="true" precision="30"/>
+        </property>
+    </class>
+</hibernate-mapping>
