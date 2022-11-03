@@ -8,12 +8,12 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.curso4.unidade3.model.ClienteHasCurso;
+import com.curso4.unidade3.model.Pagamento;
 
-public final class VendaDAO extends ConfiguracaoBD implements ICrud<ClienteHasCurso> {
+public final class PagamentoDAO extends ConfiguracaoBD implements ICrud<Pagamento> {
 
     @Override
-    public boolean create(Venda venda) throws SQLException {
+    public boolean create(Pagamento venda) throws SQLException {
         conectar();
         String comando_sql = "insert into cliente_has_curso (cliente_id, curso_id, venda_data) values (?,?,?)";
         try {
@@ -33,11 +33,11 @@ public final class VendaDAO extends ConfiguracaoBD implements ICrud<ClienteHasCu
     }
 
     @Override
-    public List<Venda> read() throws SQLException {
+    public List<Pagamento> read() throws SQLException {
         // select cliente_nome, curso_nome, venda_data from Cliente cli, Curso cur, cliente_has_curso chc where chc.cliente_id = cli.cliente_id && chc.curso_id = cur.curso_id;
         conectar();
         String comando_sql = "select * from cliente_has_curso";
-        List<Venda> vendas = new ArrayList<>();
+        List<Pagamento> vendas = new ArrayList<>();
         PreparedStatement pst = conexao.prepareStatement(comando_sql);
         ResultSet rs = pst.executeQuery();
         try {
@@ -45,7 +45,7 @@ public final class VendaDAO extends ConfiguracaoBD implements ICrud<ClienteHasCu
                 int cliente_id = Integer.parseInt(rs.getString(1));
                 int curso_id = Integer.parseInt(rs.getString(2));
                 LocalDateTime data = rs.getTimestamp(3).toLocalDateTime();
-                vendas.add(new Venda(cliente_id, curso_id, data));
+                vendas.add(new Pagamento(cliente_id, curso_id, data));
             }
             desconectar();
             return vendas;
@@ -57,7 +57,7 @@ public final class VendaDAO extends ConfiguracaoBD implements ICrud<ClienteHasCu
     }
 
     @Override
-    public boolean update(Venda venda) throws SQLException {
+    public boolean update(Pagamento venda) throws SQLException {
         conectar();
         String comando_sql = "update cliente_has_curso set venda_data=? where cliente_id=? && curso_id=?";
         try {
@@ -77,7 +77,7 @@ public final class VendaDAO extends ConfiguracaoBD implements ICrud<ClienteHasCu
     }
 
     @Override
-    public boolean delete(Venda venda) throws SQLException {
+    public boolean delete(Pagamento venda) throws SQLException {
         conectar();
         String comando_sql = "DELETE FROM cliente_has_curso where cliente_id=? && curso_id=?";
         try {
@@ -96,4 +96,3 @@ public final class VendaDAO extends ConfiguracaoBD implements ICrud<ClienteHasCu
     }
     
 }
-    

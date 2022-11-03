@@ -2,7 +2,8 @@
 <!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.org/dtd/hibernate-reverse-engineering-3.0.dtd" >
 
 <hibernate-reverse-engineering>
-  <table-filter match-catalog="lojavirtual" match-name="Cliente"/>
-  <table-filter match-catalog="lojavirtual" match-name="Cliente_has_Curso"/>
+
+<table-filter match-catalog="lojavirtual" match-name="Cliente"/>
   <table-filter match-catalog="lojavirtual" match-name="Curso"/>
+  <table-filter match-catalog="lojavirtual" match-name="cliente_has_curso"/>
 </hibernate-reverse-engineering>

@@ -1,21 +1,21 @@
-package com.curso4.unidade3;
+package com.curso4.unidade4;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.curso4.unidade3.bd.ClienteDAO;
-import com.curso4.unidade3.bd.CursoDAO;
-import com.curso4.unidade3.bd.PagamentoDAO;
-import com.curso4.unidade3.model.Cliente;
-import com.curso4.unidade3.model.Curso;
-import com.curso4.unidade3.model.Pagamento;
+import com.curso4.unidade4.bd.ClienteDAO;
+import com.curso4.unidade4.bd.CursoDAO;
+import com.curso4.unidade4.bd.VendaDAO;
+import com.curso4.unidade4.model.Cliente;
+import com.curso4.unidade4.model.Cliente_has_Curso;
+import com.curso4.unidade4.model.Curso;
 
 public class LojaVirtual {
     public List<Cliente> clientes;
     public List<Curso> cursos;
-    public List<Pagamento> pagamentos;
-    public PagamentoDAO pagamentodao = new PagamentoDAO();
+    public List<Cliente_has_Curso> vendas;
+    public VendaDAO vendadao = new VendaDAO();
     public ClienteDAO clientedao = new ClienteDAO();
     public CursoDAO cursodao = new CursoDAO();
     
@@ -26,7 +26,7 @@ public class LojaVirtual {
         
         lojaVirtual.clientes = new ArrayList<>();
         lojaVirtual.clientes.add(cliente);
-        cliente.setNome("Mudei nome");
+        cliente.setClienteNome("Mudei nome");
         lojaVirtual.clientes.forEach(System.out::println);
     }
 
@@ -66,22 +66,22 @@ public class LojaVirtual {
         cursos = cursodao.read();
     }
 
-    public void cadastrarPagamento(Pagamento pagamento) throws SQLException {
-        pagamentodao.create(pagamento);
-        pagamentos.add(pagamento);
+    public void cadastrarVenda(Cliente_has_Curso venda) throws SQLException {
+        vendadao.create(venda);
+        vendas.add(venda);
     }
 
-    public void deletarPagamento(Pagamento pagamento) throws SQLException {
-        pagamentodao.delete(pagamento);
-        pagamentos.remove(pagamento);
+    public void deletarVenda(Cliente_has_Curso venda) throws SQLException {
+        vendadao.delete(venda);
+        vendas.remove(venda);
     }
 
-    public void atualizarPagamento(Pagamento pagamento) throws SQLException {
-        pagamentodao.update(pagamento);
+    public void atualizarVenda(Cliente_has_Curso venda) throws SQLException {
+        vendadao.update(venda);
     }
 
-    public void recuperarPagamento(Pagamento pagamento) throws SQLException{
-        pagamentos = pagamentodao.read();
+    public void recuperarVenda(Cliente_has_Curso venda) throws SQLException{
+        vendas = vendadao.read();
     }
     
 }

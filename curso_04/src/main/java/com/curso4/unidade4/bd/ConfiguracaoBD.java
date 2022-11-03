@@ -1,4 +1,4 @@
-package com.curso4.unidade3.bd;
+package com.curso4.unidade4.bd;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -6,12 +6,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public sealed class ConfiguracaoBD permits ClienteDAO, CursoDAO, PagamentoDAO {
+public sealed class ConfiguracaoBD permits ClienteDAO, CursoDAO, VendaDAO {
 
-	static final String driver = "com.mysql.cj.jdbc.Driver";
+	static final String driver = "com.mariadb.jdbc.Driver";
 	static final String user = "loja";
 	static final String senha = "senhaloja";
-	static final String url = "jdbc:mysql://localhost:3306/lojavirtual";
+	static final String url = "jdbc:mariadb://localhost:3306/lojavirtual";
     static Connection conexao;
 	
   

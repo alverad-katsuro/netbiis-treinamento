@@ -1,11 +1,11 @@
-package com.curso4.unidade3.bd;
+package com.curso4.unidade4.bd;
 
 import java.sql.SQLException;
 import java.time.LocalDateTime;
 
-import com.curso4.unidade3.model.Cliente;
-import com.curso4.unidade3.model.Curso;
-import com.curso4.unidade3.model.Venda;
+import com.curso4.unidade4.model.Cliente;
+import com.curso4.unidade4.model.Cliente_has_Curso;
+import com.curso4.unidade4.model.Curso;
 
 public class VendaApp {
     public static void main(String[] args) {
@@ -28,7 +28,7 @@ public class VendaApp {
 
 
         VendaDAO vendadao = new VendaDAO();
-        Venda venda = new Venda(cliente.getId(), curso.getId(), LocalDateTime.now());
+        Cliente_has_Curso venda = new Cliente_has_Curso(cliente.getClienteId(), curso.getId(), LocalDateTime.now());
         try {
             vendadao.create(venda);
         } catch (SQLException e) {

@@ -1,4 +1,4 @@
-package com.curso4.unidade3.bd;
+package com.curso4.unidade4.bd;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;

@@ -1,4 +1,4 @@
-package com.curso4.unidade3.bd;
+package com.curso4.unidade4.bd;
 // Generated 31 de out. de 2022 12:02:22 by Hibernate Tools 4.3.6.Final
 
 import java.util.List;
@@ -11,7 +11,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
-import com.curso4.unidade3.model.Cliente;
+import com.curso4.unidade4.model.Cliente;
 
 /**
  * Home object for domain model class Cliente.
