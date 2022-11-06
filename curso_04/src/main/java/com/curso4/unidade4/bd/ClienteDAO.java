@@ -90,7 +90,7 @@ public class ClienteDAO {
             Session session = sessionFactory.getCurrentSession();
 			Transaction tx = session.beginTransaction();
 
-			Cliente instance = (Cliente) session.get("com.curso4.unidade4.model.Cliente", id);
+			Cliente instance = (Cliente) session.get(Cliente.class, id);
             tx.commit();
             session.close();
 
