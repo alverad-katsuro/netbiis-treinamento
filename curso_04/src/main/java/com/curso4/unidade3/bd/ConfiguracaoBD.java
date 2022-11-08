@@ -8,10 +8,10 @@ import java.sql.Statement;
 
 public sealed class ConfiguracaoBD permits ClienteDAO, CursoDAO, PagamentoDAO {
 
-	static final String driver = "com.mysql.cj.jdbc.Driver";
+	static final String driver = "com.mysql.jdbc.Driver";
 	static final String user = "loja";
 	static final String senha = "senhaloja";
-	static final String url = "jdbc:mysql://localhost:3306/lojavirtual";
+	static final String url = "jdbc:mariadb://localhost:3306/lojavirtual";
     static Connection conexao;
 	
   

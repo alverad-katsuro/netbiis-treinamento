@@ -12,21 +12,25 @@ import com.curso4.unidade3.model.Curso;
 import com.curso4.unidade3.model.Pagamento;
 
 public class LojaVirtual {
-    public List<Cliente> clientes;
+    public List<Cliente> clientes = new ArrayList<>();;
     public List<Curso> cursos;
     public List<Pagamento> pagamentos;
     public PagamentoDAO pagamentodao = new PagamentoDAO();
     public ClienteDAO clientedao = new ClienteDAO();
     public CursoDAO cursodao = new CursoDAO();
-    
-    public static void main(String[] args) {
+
+    public static void main(String[] args) throws SQLException {
         LojaVirtual lojaVirtual = new LojaVirtual();
 
         Cliente cliente = new Cliente("nome", "sobrenome", "email", "telefone", "cpf");
-        
-        lojaVirtual.clientes = new ArrayList<>();
-        lojaVirtual.clientes.add(cliente);
+
+        lojaVirtual.cadastrarCliente(cliente);
         cliente.setNome("Mudei nome");
+
+        lojaVirtual.atualizarCliente(cliente);
+
+        lojaVirtual.recuperarCliente();
+        
         lojaVirtual.clientes.forEach(System.out::println);
     }
 
@@ -44,7 +48,7 @@ public class LojaVirtual {
         clientedao.update(cliente);
     }
 
-    public void recuperarCliente(Cliente cliente) throws SQLException{
+    public void recuperarCliente() throws SQLException {
         clientes = clientedao.read();
     }
 
@@ -62,7 +66,7 @@ public class LojaVirtual {
         cursodao.update(curso);
     }
 
-    public void recuperarCurso(Curso curso) throws SQLException{
+    public void recuperarCurso() throws SQLException {
         cursos = cursodao.read();
     }
 
@@ -80,8 +84,8 @@ public class LojaVirtual {
         pagamentodao.update(pagamento);
     }
 
-    public void recuperarPagamento(Pagamento pagamento) throws SQLException{
+    public void recuperarPagamento() throws SQLException {
         pagamentos = pagamentodao.read();
     }
-    
+
 }
