@@ -33,18 +33,37 @@
     <dependency>
         <groupId>jakarta.servlet</groupId>
         <artifactId>jakarta.servlet-api</artifactId>
-        <version>6.0.0</version>
+        <version>5.0.0</version>
         <scope>provided</scope>
     </dependency>
+
+    <!-- https://mvnrepository.com/artifact/jakarta.servlet.jsp/jakarta.servlet.jsp-api -->
+    <dependency>
+      <groupId>jakarta.servlet.jsp</groupId>
+      <artifactId>jakarta.servlet.jsp-api</artifactId>
+      <version>3.0.0</version>
+      <scope>provided</scope>
+    </dependency>
+
 
 
     <!-- https://mvnrepository.com/artifact/jakarta.servlet.jsp.jstl/jakarta.servlet.jsp.jstl-api -->
     <dependency>
-        <groupId>jakarta.servlet.jsp.jstl</groupId>
-        <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
-        <version>3.0.0</version>
+      <groupId>jakarta.servlet.jsp.jstl</groupId>
+      <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+      <version>2.0.0</version>
     </dependency>
 
+
+
+  <!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
+  <dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>jstl</artifactId>
+    <version>1.2</version>
+  </dependency>
+
+  
     <!-- https://mvnrepository.com/artifact/jakarta.servlet.jsp/jakarta.servlet.jsp-api -->
     <dependency>
         <groupId>jakarta.servlet.jsp</groupId>
@@ -88,7 +107,7 @@
             <configuration>
                 <server>maven-tomcat-lojavirtual</server>
                 <url>http://localhost:8080/manager/text</url>
-                <path>/lojavirtual</path>
+                <path>/webapp</path>
             </configuration>
         </plugin>
         <plugin>
@@ -110,7 +129,20 @@
         </plugin>
         <plugin>
           <artifactId>maven-war-plugin</artifactId>
-          <version>3.2.2</version>
+          <version>3.3.2</version>
+          <executions>
+            <execution>
+              <phase>runtime</phase>
+              <goals>
+                <goal>inplace</goal>
+              </goals>
+              <configuration>
+                <useCache>true</useCache>
+                <workDirectory>${basedir}/src/main/webapp</workDirectory>
+              </configuration>
+            </execution>
+
+          </executions>
         </plugin>
         <plugin>
           <artifactId>maven-install-plugin</artifactId>

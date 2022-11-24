@@ -1,4 +1,4 @@
-package com.lojavirtual;
+package com.lojavirtual.control;
 
 import java.io.IOException;
 
@@ -11,19 +11,13 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
-@WebServlet(description = "Este é o nosso primeiro servlet!", urlPatterns = { "/teste" })
-public class PrimeiroServlet extends HttpServlet {
-    private static final long serialVersionUID = 1L;
+@WebServlet(urlPatterns = { "/clientes/todos" })
+public class ClienteAllServlet extends HttpServlet {
     
-    public PrimeiroServlet() {
-        super();
-    }
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
+        System.out.println("clienteall");
         session.setAttribute("clientes", ClienteDAO.readClientes());
-        request.getRequestDispatcher("/teste.jsp").forward(request, response);
-        
-        
+        request.getRequestDispatcher("/clientes/todos.jsp").forward(request, response);   
     }
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {}
 }
