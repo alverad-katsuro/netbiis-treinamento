@@ -26,14 +26,14 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center">
-            <h3 class="tt_menu">&gt;&gt; PAGAMENTOS &lt;&lt;</h3>
+            <h3 class="tt_menu">&gt;&gt; CURSOS &lt;&lt;</h3>
             <div class="col-md-12  btn-group btn-group-lg btn-group-vertical">
-              <a href="http://localhost:8080/LojaVirtual/pagamentos/all"
-                class="btn btn-default">Consultar Todos os Pagamentos</a>
-              <a href="consulta.jsp" class="btn btn-default">Consultar um Pagamento Específico</a>
-              <a href="cadastro.jsp" class="btn btn-default">Cadastrar um Novo Pagamento</a>
-              <a href="alteracao.jsp" class="btn btn-default">Alterar um Pagamento</a>
-              <a href="exclusao.jsp" class="btn btn-default">Excluir um Pagamento</a>
+              <a href="http://localhost:8080/LojaVirtual/cursos/all" class="btn btn-default">Consultar Todos os
+                Cursos</a>
+              <a href="consulta.jsp" class="btn btn-default">Consultar um Curso Espec�fico</a>
+              <a href="cadastro.jsp" class="btn btn-default">Cadastrar um Novo Curso</a>
+              <a href="alteracao.jsp" class="btn btn-default">Alterar um Curso</a>
+              <a href="exclusao.jsp" class="btn btn-default">Excluir um Curso</a>
             </div>
           </div>
         </div>
@@ -52,7 +52,7 @@
       <div class="navbar navbar-fixed-bottom bgred">
         <div class="container">
           <div class="row">
-            <div class="col-sm-12 text-center" style="top:13px;color:#fff;">ABCTreinamentos - Curso de Java 8 para Web
+            <div class="col-sm-12 text-center" style="top:13px;color:#fff;">� ABCTreinamentos - Curso de Java 8 para Web
             </div>
           </div>
         </div>

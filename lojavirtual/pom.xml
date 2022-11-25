@@ -4,12 +4,12 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.lojavirtual</groupId>
-  <artifactId>lojavirtual</artifactId>
+  <groupId>com.lojavirtuall</groupId>
+  <artifactId>lojavirtuall</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>war</packaging>
 
-  <name>lojavirtual Maven Webapp</name>
+  <name>lojavirtuall Maven Webapp</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -22,6 +22,13 @@
   </properties>
 
   <dependencies>
+
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>servlet-api</artifactId>
+      <version>3.0-alpha-1</version>
+    </dependency>
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -29,48 +36,39 @@
       <scope>test</scope>
     </dependency>
 
-    <!-- https://mvnrepository.com/artifact/jakarta.servlet/jakarta.servlet-api -->
-    <dependency>
-        <groupId>jakarta.servlet</groupId>
-        <artifactId>jakarta.servlet-api</artifactId>
-        <version>5.0.0</version>
-        <scope>provided</scope>
+    <dependency> 
+      <groupId>javax.servlet</groupId> 
+      <artifactId>jstl</artifactId> 
+      <version>1.2</version> 
     </dependency>
 
-    <!-- https://mvnrepository.com/artifact/jakarta.servlet.jsp/jakarta.servlet.jsp-api -->
+    <!-- https://mvnrepository.com/artifact/javax.servlet.jsp/javax.servlet.jsp-api -->
     <dependency>
-      <groupId>jakarta.servlet.jsp</groupId>
-      <artifactId>jakarta.servlet.jsp-api</artifactId>
-      <version>3.0.0</version>
+      <groupId>javax.servlet.jsp</groupId>
+      <artifactId>javax.servlet.jsp-api</artifactId>
+      <version>2.3.3</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/javax.servlet/servlet-api -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>3.0.1</version>
       <scope>provided</scope>
     </dependency>
 
 
 
-    <!-- https://mvnrepository.com/artifact/jakarta.servlet.jsp.jstl/jakarta.servlet.jsp.jstl-api -->
+    <!-- https://mvnrepository.com/artifact/javax.servlet.jsp/jsp-api -->
     <dependency>
-      <groupId>jakarta.servlet.jsp.jstl</groupId>
-      <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
-      <version>2.0.0</version>
+      <groupId>javax.servlet.jsp</groupId>
+      <artifactId>jsp-api</artifactId>
+      <version>2.2</version>
+      <scope>provided</scope>
     </dependency>
 
 
-
-  <!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
-  <dependency>
-    <groupId>javax.servlet</groupId>
-    <artifactId>jstl</artifactId>
-    <version>1.2</version>
-  </dependency>
-
-  
-    <!-- https://mvnrepository.com/artifact/jakarta.servlet.jsp/jakarta.servlet.jsp-api -->
-    <dependency>
-        <groupId>jakarta.servlet.jsp</groupId>
-        <artifactId>jakarta.servlet.jsp-api</artifactId>
-        <version>3.1.0</version>
-        <scope>provided</scope>
-    </dependency>
 
     <!-- Hibernete dependencies-->
     <dependency>
@@ -93,23 +91,28 @@
         <version>3.0.8</version>
     </dependency>
 
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>31.1-jre</version>
+    </dependency>
 
   </dependencies>
 
   <build>
-    <finalName>lojavirtual</finalName>
+    <finalName>LojaVirtual</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <plugin>
-            <groupId>org.apache.tomcat.maven</groupId>
-            <artifactId>tomcat7-maven-plugin</artifactId>
-            <version>2.2</version>
-            <configuration>
-                <server>maven-tomcat-lojavirtual</server>
-                <url>http://localhost:8080/manager/text</url>
-                <path>/webapp</path>
-            </configuration>
-        </plugin>
+          <groupId>org.apache.tomcat.maven</groupId>
+          <artifactId>tomcat7-maven-plugin</artifactId>
+          <version>2.2</version>
+          <configuration>
+              <server>maven-tomcat-lojavirtual</server>
+              <url>http://localhost:8080/manager/text</url>
+              <path>/LojaVirtual</path>
+          </configuration>
+      </plugin>
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
           <version>3.1.0</version>
@@ -130,19 +133,6 @@
         <plugin>
           <artifactId>maven-war-plugin</artifactId>
           <version>3.3.2</version>
-          <executions>
-            <execution>
-              <phase>runtime</phase>
-              <goals>
-                <goal>inplace</goal>
-              </goals>
-              <configuration>
-                <useCache>true</useCache>
-                <workDirectory>${basedir}/src/main/webapp</workDirectory>
-              </configuration>
-            </execution>
-
-          </executions>
         </plugin>
         <plugin>
           <artifactId>maven-install-plugin</artifactId>

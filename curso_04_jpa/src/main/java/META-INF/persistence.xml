@@ -4,6 +4,10 @@
     <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
     <properties>
 			<property name="hibernate.cfg_xml_file" value="META-INF/hibernate.cfg.xml"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:mariadb://localhost:3306/lojavirtual"/>
+			<property name="javax.persistence.jdbc.user" value="loja"/>
+			<property name="javax.persistence.jdbc.password" value="senhaloja"/>
+			<property name="javax.persistence.jdbc.driver" value="org.mariadb.jdbc.Driver"/>
 	</properties>
 	</persistence-unit>
 </persistence>

@@ -26,19 +26,39 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center">
-            <h3 class="tt_menu">&gt;&gt; PAGAMENTOS &lt;&lt;</h3>
-            <div class="col-md-12  btn-group btn-group-lg btn-group-vertical">
-              <a href="http://localhost:8080/LojaVirtual/pagamentos/all"
-                class="btn btn-default">Consultar Todos os Pagamentos</a>
-              <a href="consulta.jsp" class="btn btn-default">Consultar um Pagamento Específico</a>
-              <a href="cadastro.jsp" class="btn btn-default">Cadastrar um Novo Pagamento</a>
-              <a href="alteracao.jsp" class="btn btn-default">Alterar um Pagamento</a>
-              <a href="exclusao.jsp" class="btn btn-default">Excluir um Pagamento</a>
-            </div>
+            <h3 class="tt_menu">&gt;&gt; CURSOS - EXCLUIR CURSO &lt;&lt;</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <form class="form-horizontal" role="form" action="http://localhost:8080/LojaVirtual/curso" method="post">
+              <div class="form-group">
+                <div class="col-sm-3">
+                  <label for="inputCPF" class="control-label">Informar o código:</label>
+                </div>
+                <div class="col-sm-9">
+                  <input type="number" min="1" name="codigo" class="form-control"
+                    placeholder="digite o identificador do curso" title="Digite o código do curso" required>
+                </div>
+              </div>
+              <input type="hidden" name="isDelete" value="true">
+              <input type="hidden" name="isPut" value="false">
+              <button type="submit" class="btn btn-danger">Excluir</button>
+            </form>
           </div>
         </div>
       </div>
     </div>
+    <footer>
+      <div class="navbar navbar-fixed-bottom bgred">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 text-center" style="top:13px;color:#fff;">� ABCTreinamentos - Curso de Java 8 para Web
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
     <div class="section">
       <div class="container">
         <div class="row">
@@ -48,16 +68,6 @@
         </div>
       </div>
     </div>
-    <footer>
-      <div class="navbar navbar-fixed-bottom bgred">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 text-center" style="top:13px;color:#fff;">ABCTreinamentos - Curso de Java 8 para Web
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
 
 
   </body>

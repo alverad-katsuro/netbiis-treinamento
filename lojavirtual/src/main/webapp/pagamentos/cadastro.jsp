@@ -26,15 +26,43 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center">
-            <h3 class="tt_menu">&gt;&gt; CLIENTES &lt;&lt;</h3>
-            <div class="col-md-12  btn-group btn-group-lg btn-group-vertical">
-              <a href="http://localhost:8080/LojaVirtual/clientes/all" class="btn btn-default">Consultar Todos os
-                Clientes</a>
-              <a href="consulta.jsp" class="btn btn-default">Consultar um Cliente</a>
-              <a href="cadastro.jsp" class="btn btn-default">Cadastrar um Novo Cliente</a>
-              <a href="alteracao.jsp" class="btn btn-default">Alterar um Cliente</a>
-              <a href="exclusao.jsp" class="btn btn-default">Excluir um Cliente</a>
-            </div>
+            <h3 class="tt_menu">&gt;&gt; PAGAMENTOS - CADASTRAR PAGAMENTO &lt;&lt;</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <form class="form-horizontal" role="form" action="http://localhost:8080/LojaVirtual/pagamento"
+              method="post">
+              <div class="form-group">
+                <div class="col-sm-3">
+                  <label for="inputCpf" class="control-label">Informar o Código do Cliente</label>
+                </div>
+                <div class="col-sm-9">
+                  <input type="text" min="1" name="clienteId" class="form-control" placeholder="Código do Cliente" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-3">
+                  <label for="inputCURSO" class="control-label">Informar o código do Curso</label>
+                </div>
+                <div class="col-sm-9">
+                  <input type="number" min="1" name="cursoId" class="form-control" 
+                  placeholder="Código do curso" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-3">
+                  <label for="inputDATA" class="control-label">Informar a data de inscrição:</label>
+                </div>
+                <div class="col-sm-9">
+                  <input type="date" name="pedidoData" class="form-control" title="Preencha o campo data"
+                    required>
+                </div>
+              </div>
+              <input type="hidden" name="isDelete" value="false">
+              <input type="hidden" name="isPut" value="false">
+              <button type="submit" class="btn btn-danger">Cadastrar</button>
+            </form>
           </div>
         </div>
       </div>
